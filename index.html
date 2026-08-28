@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Writturns — Brand Strategy & Creative Direction</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 48px;border-bottom:1.5px solid #0a0a0a;position:sticky;top:0;background:#fff;z-index:50;}
+.nav-brand{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:20px;color:#0a0a0a;text-decoration:none;}
+.nav-cta{background:#0a0a0a;color:#fff;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:12px 24px;text-decoration:none;transition:background 0.2s;}
+.nav-cta:hover{background:#333;}
+
+/* HERO */
+.hero{padding:80px 48px;border-bottom:1.5px solid #0a0a0a;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.hero-tag{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#999;display:block;margin-bottom:24px;}
+.hero-h1{font-size:clamp(40px,5vw,68px);font-weight:900;letter-spacing:-3px;line-height:0.95;color:#0a0a0a;margin-bottom:28px;}
+.hero-h1 em{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;}
+.hero-sub{font-size:15px;font-weight:400;color:#555;line-height:1.8;margin-bottom:40px;max-width:420px;}
+.hero-cta{display:inline-block;background:#fddb4c;color:#0a0a0a;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:background 0.2s;}
+.hero-cta:hover{background:#e8c73a;}
+.hero-note{font-size:12px;color:#999;margin-top:14px;display:block;}
+.hero-right{display:flex;flex-direction:column;gap:2px;position:relative;}
+.stat-block{padding:28px 32px;}
+.stat-block.dark{background:#0a0a0a;border-left:4px solid #fddb4c;}
+.stat-block.light{background:#f5f5f5;border-left:4px solid #0a0a0a;}
+.stat-val{font-size:48px;font-weight:900;letter-spacing:-3px;line-height:1;display:block;}
+.stat-block.dark .stat-val{color:#fddb4c;}
+.stat-block.light .stat-val{color:#0a0a0a;}
+.stat-label{font-size:11px;font-weight:500;letter-spacing:0.5px;margin-top:6px;display:block;}
+.stat-block.dark .stat-label{color:#555;}
+.stat-block.light .stat-label{color:#888;}
+
+/* CONFETTI */
+.confetti-wrap{position:absolute;top:-8px;left:0;right:0;height:20px;overflow:visible;pointer-events:none;z-index:10;}
+@keyframes confettifall{0%{transform:translateY(-10px) rotate(0deg);opacity:1;}100%{transform:translateY(30px) rotate(200deg);opacity:0;}}
+
+/* LOGO TICKER */
+.logo-ticker-wrap{border-bottom:1.5px solid #0a0a0a;overflow:hidden;padding:20px 0;position:relative;}
+.logo-ticker-wrap::before,.logo-ticker-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:10;pointer-events:none;}
+.logo-ticker-wrap::before{left:0;background:linear-gradient(to right,#fff,transparent);}
+.logo-ticker-wrap::after{right:0;background:linear-gradient(to left,#fff,transparent);}
+.logo-ticker-track{display:flex;gap:48px;width:max-content;animation:marquee 20s linear infinite;align-items:center;}
+.logo-ticker-track:hover{animation-play-state:paused;}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.logo-item{height:32px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.logo-item img{height:100%;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.4;transition:opacity 0.2s;}
+.logo-item img:hover{opacity:0.8;}
+
+/* SCREENSHOTS */
+.screenshots-section{border-bottom:1.5px solid #0a0a0a;padding:72px 0 72px;}
+.screenshots-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#999;display:block;margin-bottom:16px;padding:0 48px;}
+.screenshots-title{font-size:clamp(28px,3.5vw,48px);font-weight:900;letter-spacing:-2.5px;line-height:0.95;color:#0a0a0a;margin-bottom:32px;padding:0 48px;}
+.screenshots-title em{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;}
+.screenshots-track-wrap{overflow-x:auto;cursor:grab;padding:0 48px 16px;}
+.screenshots-track-wrap:active{cursor:grabbing;}
+.screenshots-track-wrap::-webkit-scrollbar{height:3px;}
+.screenshots-track-wrap::-webkit-scrollbar-thumb{background:#0a0a0a;}
+.screenshots-track{display:flex;gap:12px;width:max-content;}
+.screenshot-item{flex-shrink:0;aspect-ratio:9/16;width:180px;background:#f0f0f0;border:1px solid #e8e8e8;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.screenshot-item img{width:100%;height:100%;object-fit:cover;display:block;}
+.screenshot-ph-label{font-size:8px;letter-spacing:1px;text-transform:uppercase;color:#ccc;}
+
+/* SHARED */
+.section{padding:72px 48px;border-bottom:1.5px solid #0a0a0a;}
+.section-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#999;display:block;margin-bottom:16px;}
+.section-title{font-size:clamp(32px,4vw,52px);font-weight:900;letter-spacing:-2.5px;line-height:0.95;color:#0a0a0a;margin-bottom:40px;}
+.section-title em{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;}
+
+/* WHAT WE DO */
+.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+.service-item{padding:36px;border:1px solid #e8e8e8;transition:background 0.2s,border-color 0.2s;cursor:pointer;position:relative;overflow:hidden;}
+.service-item:hover{background:#fddb4c;border-color:#fddb4c;}
+.service-item:hover .service-num{color:#0a0a0a;opacity:0.2;}
+.service-item:hover .service-title{color:#0a0a0a;}
+.service-item:hover .service-body{color:#333;}
+.service-item:hover .service-icon{opacity:0.12;}
+.service-num{font-size:11px;font-weight:700;letter-spacing:2px;color:#ccc;display:block;margin-bottom:16px;transition:color 0.2s;}
+.service-icon{position:absolute;right:16px;bottom:16px;font-size:64px;opacity:0.05;line-height:1;pointer-events:none;user-select:none;transition:opacity 0.2s;}
+.service-title{font-size:20px;font-weight:800;letter-spacing:-0.5px;color:#0a0a0a;margin-bottom:12px;transition:color 0.2s;}
+.service-body{font-size:13px;color:#666;line-height:1.75;transition:color 0.2s;}
+
+/* WORK */
+.work-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;}
+.work-item{aspect-ratio:4/5;background:#f0f0f0;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.work-item img{width:100%;height:100%;object-fit:cover;display:block;}
+.work-ph-label{font-size:8px;letter-spacing:1px;text-transform:uppercase;color:#ccc;}
+
+/* ABOUT */
+.about-wrap{border-top:1.5px solid #0a0a0a;border-bottom:1.5px solid #0a0a0a;display:grid;grid-template-columns:1fr 1fr;margin-top:40px;}
+.about-half{display:flex;flex-direction:row;gap:16px;align-items:flex-start;padding:32px 32px 32px 0;}
+.about-half:first-child{border-right:1.5px solid #0a0a0a;padding-left:0;}
+.about-half:last-child{padding-right:0;padding-left:32px;}
+.about-photo{width:33%;flex-shrink:0;aspect-ratio:4/5;background:#f0f0f0;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.about-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.about-photo-label{font-size:7px;letter-spacing:1px;text-transform:uppercase;color:#ccc;text-align:center;}
+.about-text{display:flex;flex-direction:column;gap:8px;justify-content:center;}
+.about-name{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:20px;color:#0a0a0a;line-height:1;}
+.about-role{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#999;}
+.about-bio{font-size:12px;color:#555;line-height:1.8;}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:40px;}
+.testi{padding:32px;border:1px solid #e8e8e8;}
+.testi-text{font-size:14px;color:#333;line-height:1.9;margin-bottom:20px;font-style:italic;}
+.testi-author{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#0a0a0a;}
+.testi-role{font-size:11px;color:#999;margin-top:3px;}
+
+/* QUALIFY */
+.qualify-section{padding:72px 48px;border-bottom:1.5px solid #0a0a0a;background:#0a0a0a;}
+.qualify-section .section-eyebrow{color:#444;}
+.qualify-title{font-size:clamp(32px,4vw,52px);font-weight:900;letter-spacing:-2.5px;line-height:0.95;color:#fff;margin-bottom:40px;}
+.qualify-title em{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;color:#fddb4c;}
+.checks{display:flex;flex-direction:column;gap:2px;margin-bottom:48px;}
+.check-item{display:flex;align-items:center;gap:20px;padding:24px 28px;background:#111;cursor:pointer;transition:background 0.15s;user-select:none;}
+.check-item:hover{background:#161616;}
+.check-item.checked{background:#fddb4c;}
+.check-box{width:22px;height:22px;border:2px solid #333;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.15s;}
+.check-item.checked .check-box{border-color:#0a0a0a;background:#0a0a0a;}
+.check-tick{color:#fddb4c;font-size:13px;font-weight:900;display:none;}
+.check-item.checked .check-tick{display:block;}
+.check-text{font-size:15px;font-weight:500;color:#fff;line-height:1.5;}
+.check-item.checked .check-text{color:#0a0a0a;}
+.qualify-cta{text-align:center;}
+.qualify-count{font-size:13px;color:#444;margin-bottom:24px;display:block;}
+.qualify-btn{display:inline-block;background:#fddb4c;color:#0a0a0a;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:16px 40px;text-decoration:none;opacity:0.25;pointer-events:none;transition:opacity 0.2s;}
+.qualify-btn.active{opacity:1;pointer-events:all;}
+.qualify-btn.active:hover{background:#e8c73a;}
+
+footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:center;border-top:1.5px solid #e8e8e8;}
+.footer-brand{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:16px;color:#999;}
+.footer-copy{font-size:11px;color:#ccc;}
+
+.fu{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.fu.vis{opacity:1;transform:translateY(0);}
+.fu.d1{transition-delay:0.1s;}
+
+@media(max-width:760px){
+  nav{padding:16px 20px;}
+  .hero{grid-template-columns:1fr;gap:40px;padding:48px 20px;}
+  .section{padding:48px 20px;}
+  .screenshots-eyebrow,.screenshots-title{padding:0 20px;}
+  .screenshots-track-wrap{padding:0 20px 16px;}
+  .work-grid{grid-template-columns:repeat(3,1fr);}
+  .services-grid{grid-template-columns:1fr;}
+  .testi-grid{grid-template-columns:1fr;}
+  .about-wrap{grid-template-columns:1fr;}
+  .about-half:first-child{border-right:none;border-bottom:1.5px solid #0a0a0a;padding:32px 0;}
+  .about-half:last-child{padding:32px 0;}
+  .qualify-section{padding:48px 20px;}
+  footer{padding:20px;flex-direction:column;gap:8px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://writturns.com" class="nav-brand">Writturns</a>
+  <a href="#qualify" class="nav-cta">Book a Call</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="fu">
+    <span class="hero-tag">Brand Strategy & Creative Direction</span>
+    <h1 class="hero-h1">Most brands<br/>are loud.<br/><em>Very few<br/>are heard.</em></h1>
+    <p class="hero-sub">We build the creative intelligence that sits above your agency, your media buyer and your content team. Strategy that makes every piece of communication count.</p>
+    <a href="#qualify" class="hero-cta">Book a Discovery Call</a>
+    <span class="hero-note">30 minutes. No pitch. No pressure.</span>
+  </div>
+  <div class="hero-right fu d1">
+    <div class="confetti-wrap" id="confettiWrap"></div>
+    <div class="stat-block dark"><span class="stat-val">Rs.4Cr+</span><span class="stat-label">Meta ad spend managed across funded Indian D2C brands</span></div>
+    <div class="stat-block light"><span class="stat-val">20M+</span><span class="stat-label">Organic views generated for brand and founder content</span></div>
+    <div class="stat-block dark"><span class="stat-val">3.7x</span><span class="stat-label">Revenue growth delivered for a client in under 3 weeks</span></div>
+    <div class="stat-block light"><span class="stat-val">+218%</span><span class="stat-label">Average increase in reach across executed content</span></div>
+  </div>
+</section>
+
+<!-- LOGO TICKER -->
+<div class="logo-ticker-wrap">
+  <div class="logo-ticker-track">
+    <div class="logo-item"><img src="logo_1.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_2.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_3.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_4.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_5.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_6.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_7.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_8.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_9.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_1.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_2.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_3.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_4.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_5.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_6.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_7.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_8.png" alt=""/></div>
+    <div class="logo-item"><img src="logo_9.png" alt=""/></div>
+  </div>
+</div>
+
+<!-- ORGANIC SCREENSHOTS -->
+<div class="screenshots-section">
+  <span class="screenshots-eyebrow fu">Organic proof</span>
+  <div class="screenshots-title fu d1">The numbers<br/><em>without paid.</em></div>
+  <div class="screenshots-track-wrap fu d1" id="screenshotsTrack">
+    <div class="screenshots-track">
+      <div class="screenshot-item"><img src="op_1.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_2.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_3.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_4.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_5.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_6.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_7.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_8.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_9.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_10.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_11.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_12.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_13.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_14.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_15.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_16.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_17.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_18.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_19.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_20.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_21.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_22.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_23.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_24.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_25.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_26.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_27.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_28.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_29.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_30.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_31.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_32.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_33.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_34.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_35.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_36.jpeg" alt=""/></div>
+      <div class="screenshot-item"><img src="op_37.jpeg" alt=""/></div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT WE DO -->
+<section class="section">
+  <div class="fu">
+    <span class="section-eyebrow">What we do</span>
+    <div class="section-title">Not an agency.<br/><em>A creative partner.</em></div>
+  </div>
+  <div class="services-grid fu d1">
+    <div class="service-item">
+      <span class="service-icon">🎯</span>
+      <span class="service-num">01</span>
+      <div class="service-title">Brand & Communication Strategy</div>
+      <div class="service-body">Positioning, brand voice, audience clarity, message architecture. Built before anything is written or designed. The foundation every creative decision sits on.</div>
+    </div>
+    <div class="service-item">
+      <span class="service-icon">🎬</span>
+      <span class="service-num">02</span>
+      <div class="service-title">Creative Direction</div>
+      <div class="service-body">We sit above your agency and your content team. Every brief shaped. Every creative reviewed before it goes live. The thinking your team needs but nobody is providing.</div>
+    </div>
+    <div class="service-item">
+      <span class="service-icon">📈</span>
+      <span class="service-num">03</span>
+      <div class="service-title">Performance Creative Strategy</div>
+      <div class="service-body">Ad creative built on consumer psychology not aesthetic preference. What to say, to whom, in what format and why. Diagnosed before a rupee goes behind it.</div>
+    </div>
+    <div class="service-item">
+      <span class="service-icon">💡</span>
+      <span class="service-num">04</span>
+      <div class="service-title">Social Media & Content Strategy</div>
+      <div class="service-body">Not a content calendar. A documented point of view on what your brand should own in culture. What conversations to start, sustain and stay out of entirely.</div>
+    </div>
+  </div>
+</section>
+
+<!-- THE WORK -->
+<section class="section">
+  <div class="fu">
+    <span class="section-eyebrow">The work</span>
+    <div class="section-title">Communication built<br/><em>to stop people.</em></div>
+  </div>
+  <div class="work-grid fu d1">
+    <div class="work-item"><img src="ad1.png" alt=""/></div>
+    <div class="work-item"><img src="ad2.png" alt=""/></div>
+    <div class="work-item"><img src="ad3.png" alt=""/></div>
+    <div class="work-item"><img src="ad4.png" alt=""/></div>
+    <div class="work-item"><img src="ad5.png" alt=""/></div>
+    <div class="work-item"><img src="ad6.png" alt=""/></div>
+    <div class="work-item"><img src="ad7.png" alt=""/></div>
+    <div class="work-item"><img src="ad8.png" alt=""/></div>
+    <div class="work-item"><img src="ad9.png" alt=""/></div>
+    <div class="work-item"><img src="ad10.png" alt=""/></div>
+    <div class="work-item"><img src="ad11.png" alt=""/></div>
+    <div class="work-item"><img src="ad12.png" alt=""/></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <div class="fu">
+    <span class="section-eyebrow">Who we are</span>
+    <div class="section-title">The people behind<br/><em>the thinking.</em></div>
+  </div>
+  <div class="about-wrap fu d1">
+    <div class="about-half">
+      <div class="about-photo">
+        <!-- Replace with: <img src="vishal.jpeg" alt="Vishal Joshi"/> -->
+        <span class="about-photo-label">Your photo</span>
+      </div>
+      <div class="about-text">
+        <div class="about-name">Vishal Joshi</div>
+        <span class="about-role">Founder, Writturns</span>
+        <p class="about-bio">I run a performance creative strategy agency that has managed over Rs.4 crore in Meta ad spend and generated 20 million organic views for brands across India. I have worked with Mercedes-Benz, Salesforce, Gully Gang, Sleepy Owl and Atti Culture. Obsessed with one question — why do some brands stop people and most do not.</p>
+      </div>
+    </div>
+    <div class="about-half">
+      <div class="about-photo">
+        <!-- Replace with: <img src="khushi.jpeg" alt="Khushi Kataria"/> -->
+        <span class="about-photo-label">Khushi's photo</span>
+      </div>
+      <div class="about-text">
+        <div class="about-name">Khushi Kataria</div>
+        <span class="about-role">Add her role here</span>
+        <p class="about-bio">Add Khushi's bio here — what she does, what she brings to Writturns and her background in the industry.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+  <div class="fu">
+    <span class="section-eyebrow">In practice</span>
+    <div class="section-title">What it feels like<br/><em>to work together.</em></div>
+  </div>
+  <div class="testi-grid fu d1">
+    <div class="testi">
+      <p class="testi-text">"It's been amazing working with you. Your team's creativity really made our ad campaign shine. You took the time to understand our brand values and goals. The video is a big hit."</p>
+      <div class="testi-author">Ganesh Bugatha</div>
+      <div class="testi-role">Creator & Founder, TONES Fashion</div>
+    </div>
+    <div class="testi">
+      <p class="testi-text">"Writturns helped us promote domestic tours like Rajasthan, Kashmir and Himachal Pradesh through visual content and these tours became our best sellers. Their approach was professional and they had a very good understanding of our requirements."</p>
+      <div class="testi-author">Sameer Joshi</div>
+      <div class="testi-role">CEO, The Bucket List</div>
+    </div>
+    <div class="testi">
+      <p class="testi-text">"Vishal and his team were amazing to work with. The reels they created were captivating and truly captured the essence of the concert. Professional, quick and creative. They captured some great moments and seamlessly edited the footage for our social media channels."</p>
+      <div class="testi-author">Ofro</div>
+      <div class="testi-role">Rapper, Think Music</div>
+    </div>
+    <div class="testi">
+      <p class="testi-text">"It was a great experience working with the team. We appreciate their attention to detail and creativity which helps create an astounding visual identity for our ideas. Bravo!"</p>
+      <div class="testi-author">Varun</div>
+      <div class="testi-role">Founder, Urban Prospect</div>
+    </div>
+    <div class="testi">
+      <p class="testi-text">"We were smiling the whole time watching the photos and videos that the team made for us. They helped us capture our best moments effortlessly. Super professional and really attentive to our requirements. Can't recommend them enough!"</p>
+      <div class="testi-author">Nikunj Rele</div>
+      <div class="testi-role">Fitness Coach</div>
+    </div>
+    <div class="testi">
+      <p class="testi-text">"Timeline, edits, output — everything is on point. Revision of output if the client wasn't satisfied is the best feature any agency must have and you got it. Revised multiple times and got the best result possible. Keep going."</p>
+      <div class="testi-author">Vidya</div>
+      <div class="testi-role">Label Head, Atti Culture</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALIFY -->
+<section class="qualify-section" id="qualify">
+  <span class="section-eyebrow">Are we a fit</span>
+  <div class="qualify-title fu">Tick all three.<br/><em>Then let's talk.</em></div>
+  <div class="checks fu d1">
+    <div class="check-item" onclick="toggleCheck(this)">
+      <div class="check-box"><span class="check-tick">✓</span></div>
+      <span class="check-text">You are putting out content every day but it is not building recognition, recall or revenue.</span>
+    </div>
+    <div class="check-item" onclick="toggleCheck(this)">
+      <div class="check-box"><span class="check-tick">✓</span></div>
+      <span class="check-text">You have a team that can make things. Nobody to tell them what to make and why.</span>
+    </div>
+    <div class="check-item" onclick="toggleCheck(this)">
+      <div class="check-box"><span class="check-tick">✓</span></div>
+      <span class="check-text">You want someone in your corner for the long run, not a one-time fix.</span>
+    </div>
+  </div>
+  <div class="qualify-cta">
+    <span class="qualify-count" id="qualifyCount">0 of 3 checked</span>
+    <a href="https://cal.com/writturns/30min" class="qualify-btn" id="qualifyBtn" target="_blank">Book a Discovery Call</a>
+    <span style="display:block;font-size:12px;color:#444;margin-top:16px;">or email hello@writturns.com</span>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-brand">Writturns</span>
+  <span class="footer-copy">© 2026 Vishal Joshi. All rights reserved.</span>
+</footer>
+
+<script>
+const fus=document.querySelectorAll('.fu');
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}});},{threshold:0.08});
+fus.forEach(el=>io.observe(el));
+
+const confettiColors=['#fddb4c','#0a0a0a','#e24b4a','#27ae60','#3498db','#9b59b6'];
+const confettiShapes=['■','●','▲','◆'];
+function spawnConfetti(){
+  const wrap=document.getElementById('confettiWrap');
+  if(!wrap)return;
+  wrap.innerHTML='';
+  for(let i=0;i<20;i++){
+    const p=document.createElement('span');
+    p.textContent=confettiShapes[Math.floor(Math.random()*confettiShapes.length)];
+    p.style.cssText=`position:absolute;left:${Math.random()*100}%;top:0;color:${confettiColors[Math.floor(Math.random()*confettiColors.length)]};font-size:${5+Math.random()*7}px;animation:confettifall ${0.8+Math.random()*1}s ease-in ${Math.random()*0.4}s forwards;opacity:0.9;`;
+    wrap.appendChild(p);
+  }
+}
+spawnConfetti();
+setInterval(spawnConfetti,2500);
+
+function toggleCheck(el){
+  el.classList.toggle('checked');
+  const total=document.querySelectorAll('.check-item.checked').length;
+  document.getElementById('qualifyCount').textContent=total+' of 3 checked';
+  const btn=document.getElementById('qualifyBtn');
+  if(total===3){btn.classList.add('active');}else{btn.classList.remove('active');}
+}
+
+const track=document.getElementById('screenshotsTrack');
+let isDown=false,startX,scrollLeft;
+track.addEventListener('mousedown',e=>{isDown=true;track.style.cursor='grabbing';startX=e.pageX-track.offsetLeft;scrollLeft=track.scrollLeft;});
+track.addEventListener('mouseleave',()=>{isDown=false;track.style.cursor='grab';});
+track.addEventListener('mouseup',()=>{isDown=false;track.style.cursor='grab';});
+track.addEventListener('mousemove',e=>{if(!isDown)return;e.preventDefault();const x=e.pageX-track.offsetLeft;const walk=(x-startX)*1.5;track.scrollLeft=scrollLeft-walk;});
+</script>
+</body>
+</html>
