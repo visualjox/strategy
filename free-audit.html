@@ -12,7 +12,7 @@
 html{scroll-behavior:smooth;}
 body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
 
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 48px;border-bottom:1.5px solid #0a0a0a;position:sticky;top:0;background:#fff;z-index:50;gap:24px;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 48px;border-bottom:1.5px solid #0a0a0a;position:sticky;top:0;background:#fff;z-index:50;gap:24px;} .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;} .hamburger span{display:block;width:22px;height:2px;background:#0a0a0a;transition:all 0.2s;} .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:100;flex-direction:column;padding:80px 32px 32px;gap:24px;border-bottom:1.5px solid #0a0a0a;} .mobile-menu.open{display:flex;} .mobile-menu-close{position:absolute;top:20px;right:24px;font-size:24px;cursor:pointer;background:none;border:none;color:#0a0a0a;} .mobile-menu a{font-size:20px;font-weight:700;letter-spacing:-0.5px;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #e8e8e8;padding-bottom:20px;} .mobile-menu a.nav-cta-mobile{background:#fddb4c;color:#0a0a0a;padding:16px 24px;text-align:center;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border:none;margin-top:8px;} .beta-tag{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:#e24b4a;color:#fff;padding:2px 6px;margin-left:6px;animation:blink 1.5s infinite;} @keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}} @media(max-width:760px){   nav{padding:14px 20px;}   .nav-links{display:none;}   .hamburger{display:flex;} }
 .nav-brand{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:20px;color:#0a0a0a;text-decoration:none;flex-shrink:0;}
 .nav-links{display:flex;gap:0;align-items:center;}
 .nav-link{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#999;text-decoration:none;padding:8px 16px;transition:color 0.2s;white-space:nowrap;}
@@ -191,11 +191,18 @@ footer{padding:24px 48px;display:flex;justify-content:space-between;align-items:
 <nav>
   <a href="/" class="nav-brand">Writturns</a>
   <div class="nav-links">
-    <a href="/ad-audit.html" class="nav-link">Audit Your Ads</a>
-    <a href="/kit.html" class="nav-link">Get the Kit</a>
+    <a href="/free-audit.html" class="nav-link">Free Audit <span class="beta-tag">Beta</span></a>
   </div>
   <a href="/#qualify" class="nav-cta">Book a Call</a>
+  <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
+  <a href="/free-audit.html">Free Audit <span class="beta-tag">Beta</span></a>
+  <a href="/#qualify" class="nav-cta-mobile">Book a Call</a>
+</div>
 
 <div class="hero">
   <span class="hero-tag">Free Creative Diagnosis — 1 audit per email</span>
