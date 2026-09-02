@@ -12,21 +12,21 @@ html{scroll-behavior:smooth;}
 body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 
 nav{display:flex;justify-content:space-between;align-items:center;padding:20px 48px;border-bottom:1.5px solid #0a0a0a;position:sticky;top:0;background:#fff;z-index:50;gap:24px;}
+.nav-brand{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:20px;color:#0a0a0a;text-decoration:none;}
+.nav-links{display:flex;gap:0;align-items:center;}
+.nav-link{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#999;text-decoration:none;padding:8px 16px;transition:color 0.2s;white-space:nowrap;}
+.nav-link:hover{color:#0a0a0a;}
+.nav-cta{background:#fddb4c;color:#0a0a0a;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:12px 24px;text-decoration:none;transition:background 0.2s;flex-shrink:0;}
+.nav-cta:hover{background:#e8c73a;}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
 .hamburger span{display:block;width:22px;height:2px;background:#0a0a0a;transition:all 0.2s;}
-.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:100;flex-direction:column;padding:80px 32px 32px;gap:24px;border-bottom:1.5px solid #0a0a0a;}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:100;flex-direction:column;padding:80px 32px 32px;gap:24px;}
 .mobile-menu.open{display:flex;}
 .mobile-menu-close{position:absolute;top:20px;right:24px;font-size:24px;cursor:pointer;background:none;border:none;color:#0a0a0a;}
-.mobile-menu a{font-size:20px;font-weight:700;letter-spacing:-0.5px;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #e8e8e8;padding-bottom:20px;}
+.mobile-menu a{font-family:'Inter',sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.5px;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #e8e8e8;padding-bottom:20px;}
 .mobile-menu a.nav-cta-mobile{background:#fddb4c;color:#0a0a0a;padding:16px 24px;text-align:center;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border:none;margin-top:8px;}
-.beta-tag{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:#e24b4a;color:#fff;padding:2px 6px;margin-left:6px;animation:blink 1.5s infinite;}
+.beta-tag{font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:#e24b4a;color:#fff;padding:2px 6px;margin-left:6px;animation:blink 1.5s infinite;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
-
-  .hamburger{display:flex;}
-}
-  .nav-brand{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:20px;color:#0a0a0a;text-decoration:none;}
-.nav-cta{background:#0a0a0a;color:#fff;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:12px 24px;text-decoration:none;transition:background 0.2s;}
-.nav-cta:hover{background:#333;}
 
 /* HERO */
 .hero{padding:80px 48px;border-bottom:1.5px solid #0a0a0a;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
@@ -154,6 +154,8 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
 
 @media(max-width:760px){
   nav{padding:16px 20px;}
+  .nav-links{display:none;}
+.hamburger{display:flex;}
   .hero{grid-template-columns:1fr;gap:40px;padding:48px 20px;}
   .section{padding:48px 20px;}
   .screenshots-eyebrow,.screenshots-title{padding:0 20px;}
@@ -176,15 +178,20 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
   <div class="nav-links">
     <a href="/free-audit.html" class="nav-link">Free Audit <span class="beta-tag">Beta</span></a>
   </div>
-  <a href="/#qualify" class="nav-cta">Book a Call</a>
+  <a href="#qualify" class="nav-cta">Book a Call</a>
   <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
     <span></span><span></span><span></span>
   </div>
 </nav>
+  <div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
+  <a href="/free-audit.html">Free Audit <span class="beta-tag">Beta</span></a>
+  <a href="#qualify" class="nav-cta-mobile">Book a Call</a>
+</div>
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
   <a href="/free-audit.html">Free Audit <span class="beta-tag">Beta</span></a>
-  <a href="/#qualify" class="nav-cta-mobile">Book a Call</a>
+  <a href="#qualify" class="nav-cta-mobile">Book a Call</a>
 </div>
 
 <!-- HERO -->
