@@ -252,7 +252,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
   <a href="/strategy/" class="nav-brand"><span class="logo-rare">Rare</span><span class="logo-labs">Labs</span><span class="logo-by">by admasterjojo</span></a>
   <div class="nav-links">
     <a href="/strategy/free-audit.html" class="nav-link">Free Ad Audit <span class="beta-tag">Beta</span></a>
-    <a href="/strategy/playbook.html" class="nav-link">The Playbook</a>
+    <a href="#playbook" class="nav-link">The Playbook</a>
   </div>
   <a href="#qualify" class="nav-cta">Book a Call</a>
   <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
@@ -262,7 +262,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
   <a href="/strategy/free-audit.html">Free Ad Audit <span class="beta-tag">Beta</span></a>
-  <a href="/strategy/playbook.html">The Playbook</a>
+  <a href="#playbook">The Playbook</a>
   <a href="#qualify" class="nav-cta-mobile">Book a Call</a>
 </div>
 
@@ -456,7 +456,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
 </section>
 
 <!-- THE PLAYBOOK -->
-<section class="playbook-section">
+<section class="playbook-section" id="playbook">
   <div class="fu">
     <span class="section-eyebrow">The Playbook</span>
     <div class="section-title">Plays that<br/><em>never ghost.</em></div>
@@ -543,7 +543,6 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
   <div class="qualify-cta">
     <span class="qualify-count" id="qualifyCount">0 of 3 checked</span>
     <a href="https://cal.com/writturns/30min" class="qualify-btn" id="qualifyBtn" target="_blank">Book a Discovery Call</a>
-    <span style="display:block;font-size:12px;color:#444;margin-top:16px;">or email hello@writturns.com</span>
   </div>
 </section>
 
@@ -661,7 +660,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
     </div>
     <div class="popup-cta-bar">
       <span class="popup-cta-note">Written by Vishal Joshi · RareLabs</span>
-      <a href="/strategy/free-audit.html" class="popup-cta-btn">Design your own play</a>
+      <a href="#qualify" class="popup-cta-btn" onclick="document.getElementById('blogPopup').classList.remove('open')">Design your own play</a>
     </div>
   </div>
 </div>
