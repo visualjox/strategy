@@ -3,19 +3,26 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <link rel="icon" type="image/png" href="favicon.png"/>
-<title>Rizz Media</title>
+<link rel="icon" type="image/png" href="favicon.png"/>
+<title>RareLabs by Jojo</title>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-.nav-brand .logo-rizz{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;font-style:normal;letter-spacing:-2px;font-size:20px;}
-.nav-brand .logo-media{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-1px;font-size:20px;}
-  .footer-brand .logo-rizz{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;font-style:normal;letter-spacing:-2px;font-size:16px;}
-.footer-brand .logo-media{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-1px;font-size:16px;}
+
+.logo-rare{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;font-style:normal;letter-spacing:-2px;}
+.logo-labs{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-1px;}
+.logo-by{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;opacity:0.35;margin-left:5px;}
+.nav-brand .logo-rare{font-size:20px;}
+.nav-brand .logo-labs{font-size:20px;}
+.nav-brand .logo-by{font-size:11px;}
+.footer-brand .logo-rare{font-size:16px;}
+.footer-brand .logo-labs{font-size:16px;}
+.footer-brand .logo-by{font-size:10px;}
+
 nav{display:flex;justify-content:space-between;align-items:center;padding:20px 48px;border-bottom:1.5px solid #0a0a0a;position:sticky;top:0;background:#fff;z-index:50;gap:24px;}
-.nav-brand{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:20px;color:#0a0a0a;text-decoration:none;}
+.nav-brand{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:20px;color:#0a0a0a;text-decoration:none;display:flex;align-items:baseline;}
 .nav-links{display:flex;gap:0;align-items:center;}
 .nav-link{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#999;text-decoration:none;padding:8px 16px;transition:color 0.2s;white-space:nowrap;}
 .nav-link:hover{color:#0a0a0a;}
@@ -29,6 +36,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:20px 4
 .mobile-menu a{font-family:'Inter',sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.5px;color:#0a0a0a;text-decoration:none;border-bottom:1px solid #e8e8e8;padding-bottom:20px;}
 .mobile-menu a.nav-cta-mobile{background:#fddb4c;color:#0a0a0a;padding:16px 24px;text-align:center;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border:none;margin-top:8px;}
 .beta-tag{font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:#e24b4a;color:#fff;padding:2px 6px;margin-left:6px;animation:blink 1.5s infinite;}
+.new-tag{font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:#e24b4a;color:#fff;padding:2px 6px;margin-left:8px;animation:blink 1.5s infinite;vertical-align:middle;flex-shrink:0;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
 
 /* HERO */
@@ -79,7 +87,6 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:20px 4
 .screenshots-track{display:flex;gap:12px;width:max-content;}
 .screenshot-item{flex-shrink:0;aspect-ratio:9/16;width:180px;background:#f0f0f0;border:1px solid #e8e8e8;overflow:hidden;display:flex;align-items:center;justify-content:center;}
 .screenshot-item img{width:100%;height:100%;object-fit:cover;display:block;}
-.screenshot-ph-label{font-size:8px;letter-spacing:1px;text-transform:uppercase;color:#ccc;}
 
 /* SHARED */
 .section{padding:72px 48px;border-bottom:1.5px solid #0a0a0a;}
@@ -104,7 +111,6 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:20px 4
 .work-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;}
 .work-item{aspect-ratio:4/5;background:#f0f0f0;overflow:hidden;display:flex;align-items:center;justify-content:center;}
 .work-item img{width:100%;height:100%;object-fit:cover;display:block;}
-.work-ph-label{font-size:8px;letter-spacing:1px;text-transform:uppercase;color:#ccc;}
 
 /* ABOUT */
 .about-wrap{border-top:1.5px solid #0a0a0a;border-bottom:1.5px solid #0a0a0a;display:grid;grid-template-columns:1fr 1fr;margin-top:40px;}
@@ -113,11 +119,26 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:20px 4
 .about-half:last-child{padding-right:0;padding-left:32px;}
 .about-photo{width:33%;flex-shrink:0;aspect-ratio:4/5;background:#f0f0f0;display:flex;align-items:center;justify-content:center;overflow:hidden;}
 .about-photo img{width:100%;height:100%;object-fit:cover;display:block;}
-.about-photo-label{font-size:7px;letter-spacing:1px;text-transform:uppercase;color:#ccc;text-align:center;}
 .about-text{display:flex;flex-direction:column;gap:8px;justify-content:center;}
 .about-name{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:20px;color:#0a0a0a;line-height:1;}
 .about-role{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#999;}
 .about-bio{font-size:12px;color:#555;line-height:1.8;}
+
+/* PLAYBOOK SECTION */
+.playbook-section{padding:72px 48px;border-bottom:1.5px solid #0a0a0a;}
+.play-card{background:#fddb4c;display:grid;grid-template-columns:320px 1fr;border:1.5px solid #0a0a0a;cursor:pointer;transition:opacity 0.2s;margin-top:32px;}
+.play-card:hover{opacity:0.9;}
+.play-thumb{background:#e8c73a;border-right:1.5px solid #0a0a0a;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.play-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+.play-thumb-ph{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#b8960a;}
+.play-content{padding:40px 48px;display:flex;flex-direction:column;justify-content:space-between;}
+.play-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0a0a0a;opacity:0.5;display:block;margin-bottom:12px;}
+.play-title-wrap{display:flex;align-items:flex-start;gap:10px;margin-bottom:16px;}
+.play-title{font-size:clamp(20px,2.5vw,30px);font-weight:900;letter-spacing:-1px;color:#0a0a0a;line-height:1.05;}
+.play-subtitle{font-size:14px;color:#0a0a0a;opacity:0.65;line-height:1.7;margin-bottom:32px;max-width:440px;}
+.play-bottom{display:flex;justify-content:space-between;align-items:center;}
+.play-meta{font-size:11px;color:#0a0a0a;opacity:0.5;font-weight:600;}
+.play-read-btn{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;background:#0a0a0a;color:#fddb4c;padding:12px 24px;border:none;cursor:pointer;}
 
 /* TESTIMONIALS */
 .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:40px;}
@@ -148,8 +169,53 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:20px 4
 .qualify-btn.active:hover{background:#e8c73a;}
 
 footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:center;border-top:1.5px solid #e8e8e8;}
-.footer-brand{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:16px;color:#999;}
+.footer-brand{display:flex;align-items:baseline;font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:16px;color:#999;}
 .footer-copy{font-size:11px;color:#ccc;}
+
+/* POPUP */
+.popup-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:200;display:none;align-items:center;justify-content:center;padding:24px;}
+.popup-overlay.open{display:flex;}
+.popup-window{background:#fff;width:100%;max-width:680px;height:88vh;display:flex;flex-direction:column;border:1.5px solid #0a0a0a;position:relative;}
+.popup-header{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-bottom:1.5px solid #0a0a0a;flex-shrink:0;}
+.popup-header-brand{display:flex;align-items:baseline;text-decoration:none;}
+.popup-header-section{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#999;margin-left:12px;}
+.popup-close{background:none;border:1.5px solid #0a0a0a;font-size:16px;cursor:pointer;color:#0a0a0a;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;}
+.popup-close:hover{background:#0a0a0a;color:#fff;}
+.popup-scroll{flex:1;overflow-y:auto;padding:40px 48px;}
+.popup-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#999;display:block;margin-bottom:14px;}
+.popup-title{font-size:clamp(28px,4vw,42px);font-weight:900;letter-spacing:-2px;line-height:0.95;color:#0a0a0a;margin-bottom:16px;}
+.popup-title em{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;}
+.popup-subtitle{font-size:15px;color:#555;line-height:1.7;margin-bottom:24px;}
+.popup-meta{display:flex;gap:20px;padding-bottom:24px;border-bottom:1.5px solid #0a0a0a;margin-bottom:32px;}
+.popup-meta span{font-size:11px;color:#999;font-weight:500;}
+.popup-meta strong{color:#0a0a0a;}
+.popup-thumb{width:100%;aspect-ratio:1/1;background:#f0f0f0;display:flex;align-items:center;justify-content:center;margin-bottom:32px;border:1px solid #e8e8e8;overflow:hidden;}
+.popup-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+.popup-thumb-ph{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#ccc;}
+.popup-body{font-size:15px;color:#1a1a1a;line-height:1.85;}
+.popup-body p{margin-bottom:24px;}
+.popup-body h2{font-size:22px;font-weight:800;letter-spacing:-0.5px;color:#0a0a0a;margin:40px 0 14px;line-height:1.1;}
+.popup-body h2 em{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;}
+.popup-body strong{color:#0a0a0a;font-weight:700;}
+.popup-body ul{list-style:none;margin:0 0 24px;}
+.popup-body ul li{padding:10px 0;border-bottom:1px solid #f0f0f0;font-size:14px;color:#333;line-height:1.7;display:flex;gap:10px;}
+.popup-body ul li:first-child{border-top:1px solid #f0f0f0;}
+.popup-li-dot{color:#0a0a0a;font-weight:900;flex-shrink:0;}
+.popup-pull{border-left:4px solid #fddb4c;padding:18px 24px;margin:32px 0;background:#fafafa;}
+.popup-pull p{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:20px;color:#0a0a0a;line-height:1.5;}
+.popup-dark{background:#0a0a0a;padding:24px 28px;margin:32px 0;}
+.popup-dark p{font-size:14px;color:#fff;line-height:1.8;}
+.popup-dark strong{color:#fddb4c;}
+.popup-ph-img{width:100%;aspect-ratio:1/1;background:#f0f0f0;display:flex;align-items:center;justify-content:center;margin:24px 0;border:1px solid #e8e8e8;}
+.popup-ph-img span{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#ccc;}
+.popup-ph-169{width:100%;aspect-ratio:16/9;background:#f0f0f0;display:flex;align-items:center;justify-content:center;margin:24px 0;border:1px solid #e8e8e8;}
+.popup-ph-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:24px 0;}
+.popup-ph-45{aspect-ratio:4/5;background:#f0f0f0;display:flex;align-items:center;justify-content:center;border:1px solid #e8e8e8;}
+.popup-img-caption{font-size:11px;color:#999;text-align:center;margin-top:-16px;margin-bottom:24px;font-style:italic;}
+.popup-cta-bar{padding:16px 24px;border-top:1.5px solid #0a0a0a;flex-shrink:0;display:flex;justify-content:space-between;align-items:center;background:#fff;}
+.popup-cta-note{font-size:11px;color:#999;}
+.popup-cta-btn{background:#fddb4c;color:#0a0a0a;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:12px 20px;border:none;cursor:pointer;text-decoration:none;display:inline-block;}
+.popup-cta-btn:hover{background:#e8c73a;}
 
 .fu{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease,transform 0.6s ease;}
 .fu.vis{opacity:1;transform:translateY(0);}
@@ -158,9 +224,13 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
 @media(max-width:760px){
   nav{padding:16px 20px;}
   .nav-links{display:none;}
-.hamburger{display:flex;}
+  .hamburger{display:flex;}
   .hero{grid-template-columns:1fr;gap:40px;padding:48px 20px;}
   .section{padding:48px 20px;}
+  .playbook-section{padding:48px 20px;}
+  .play-card{grid-template-columns:1fr;}
+  .play-thumb{aspect-ratio:1/1;border-right:none;border-bottom:1.5px solid #0a0a0a;}
+  .play-content{padding:24px 20px;}
   .screenshots-eyebrow,.screenshots-title{padding:0 20px;}
   .screenshots-track-wrap{padding:0 20px 16px;}
   .work-grid{grid-template-columns:repeat(3,1fr);}
@@ -171,36 +241,35 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
   .about-half:last-child{padding:32px 0;}
   .qualify-section{padding:48px 20px;}
   footer{padding:20px;flex-direction:column;gap:8px;}
+  .popup-scroll{padding:24px 20px;}
+  .popup-ph-grid{grid-template-columns:repeat(2,1fr);}
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="/strategy/" class="nav-brand"><span class="logo-rizz">Rizz</span><span class="logo-media">Media</span></a>
+  <a href="/strategy/" class="nav-brand"><span class="logo-rare">Rare</span><span class="logo-labs">Labs</span><span class="logo-by">by admasterjojo</span></a>
   <div class="nav-links">
     <a href="/strategy/free-audit.html" class="nav-link">Free Ad Audit <span class="beta-tag">Beta</span></a>
+    <a href="/strategy/playbook.html" class="nav-link">The Playbook</a>
   </div>
   <a href="#qualify" class="nav-cta">Book a Call</a>
   <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
     <span></span><span></span><span></span>
   </div>
 </nav>
-  <div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
-  <a href="/strategy/free-audit.html">Free Ad Audit <span class="beta-tag">Beta</span></a>
-  <a href="#qualify" class="nav-cta-mobile">Book a Call</a>
-</div>
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
   <a href="/strategy/free-audit.html">Free Ad Audit <span class="beta-tag">Beta</span></a>
+  <a href="/strategy/playbook.html">The Playbook</a>
   <a href="#qualify" class="nav-cta-mobile">Book a Call</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="fu">
-    <span class="hero-tag">Brand Strategy & Creative Direction</span>
+    <span class="hero-tag">strategy | organic | performance</span>
     <h1 class="hero-h1">Most brands<br/>are loud.<br/><em>Very few<br/>are heard.</em></h1>
     <p class="hero-sub">We build the creative intelligence that sits above your agency, your media buyer and your content team. Strategy that makes every piece of communication count.</p>
     <a href="#qualify" class="hero-cta">Book a Discovery Call</a>
@@ -368,9 +437,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
   </div>
   <div class="about-wrap fu d1">
     <div class="about-half">
-      <div class="about-photo">
-  <img src="vishal.png" alt="Vishal Joshi"/>
-</div>
+      <div class="about-photo"><img src="vishal.png" alt="Vishal Joshi"/></div>
       <div class="about-text">
         <div class="about-name">Vishal Joshi</div>
         <span class="about-role">Creative Strategist | Copywriter</span>
@@ -378,13 +445,38 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
       </div>
     </div>
     <div class="about-half">
-     <div class="about-photo">
-  <img src="khushi.jpeg" alt="Khushi Kataria"/>
-</div>
+      <div class="about-photo"><img src="khushi.jpeg" alt="Khushi Kataria"/></div>
       <div class="about-text">
         <div class="about-name">Khushi Kataria</div>
         <span class="about-role">Video Editor | Performance Lead</span>
         <p class="about-bio">Loves ROAS. Loves masala dosa more. Thinks storytelling is the best video editing hack. Foodie at heart, critic in the brain.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE PLAYBOOK -->
+<section class="playbook-section">
+  <div class="fu">
+    <span class="section-eyebrow">The Playbook</span>
+    <div class="section-title">Plays that<br/><em>never ghost.</em></div>
+  </div>
+  <div class="play-card fu d1" onclick="document.getElementById('blogPopup').classList.add('open')">
+    <div class="play-thumb">
+      <span class="play-thumb-ph">Thumbnail 1×1</span>
+    </div>
+    <div class="play-content">
+      <div>
+        <span class="play-eyebrow">Brand Strategy · Hip-Hop · Culture</span>
+        <div class="play-title-wrap">
+          <div class="play-title">Outside the Box: How I'd Own Hip-Hop Culture if I Ran Gully Gang</div>
+          <span class="new-tag">New</span>
+        </div>
+        <p class="play-subtitle">How Gully Gang could engineer a cultural moment instead of selling merch. 222 pairs. No ads. No dilution. Just a mythology, engineered deliberately.</p>
+      </div>
+      <div class="play-bottom">
+        <span class="play-meta">Vishal Joshi &nbsp;·&nbsp; 7 min read</span>
+        <button class="play-read-btn">Read the play →</button>
       </div>
     </div>
   </div>
@@ -403,7 +495,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
       <div class="testi-role">Creator & Founder, TONES Fashion</div>
     </div>
     <div class="testi">
-      <p class="testi-text">"Writturns helped us promote domestic tours like Rajasthan, Kashmir and Himachal Pradesh through visual content and these tours became our best sellers. Their approach was professional and they had a very good understanding of our requirements."</p>
+      <p class="testi-text">"RareLabs helped us promote domestic tours like Rajasthan, Kashmir and Himachal Pradesh through visual content and these tours became our best sellers. Their approach was professional and they had a very good understanding of our requirements."</p>
       <div class="testi-author">Sameer Joshi</div>
       <div class="testi-role">CEO, The Bucket List</div>
     </div>
@@ -456,9 +548,124 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
 </section>
 
 <footer>
-  <span class="footer-brand"><span class="logo-rizz">Rizz</span><span class="logo-media">Media</span></span>
+  <span class="footer-brand"><span class="logo-rare">Rare</span><span class="logo-labs">Labs</span><span class="logo-by">by admasterjojo</span></span>
   <span class="footer-copy">© 2026 Vishal Joshi. All rights reserved.</span>
 </footer>
+
+<!-- BLOG POPUP -->
+<div class="popup-overlay" id="blogPopup">
+  <div class="popup-window">
+    <div class="popup-header">
+      <div style="display:flex;align-items:baseline;">
+        <span class="logo-rare" style="font-size:16px;">Rare</span><span class="logo-labs" style="font-size:16px;">Labs</span>
+        <span class="popup-header-section">The Playbook</span>
+      </div>
+      <button class="popup-close" onclick="document.getElementById('blogPopup').classList.remove('open')">✕</button>
+    </div>
+    <div class="popup-scroll">
+      <span class="popup-eyebrow">Brand Strategy · Hip-Hop · Culture</span>
+      <h1 class="popup-title">Outside the Box:<br/><em>How I'd Own Hip-Hop<br/>Culture if I Ran Gully Gang</em></h1>
+      <p class="popup-subtitle">How Gully Gang could engineer a cultural moment instead of selling merch.</p>
+      <div class="popup-meta">
+        <span><strong>Vishal Joshi</strong></span>
+        <span>Brand Strategy</span>
+        <span>7 min read</span>
+      </div>
+      <div class="popup-thumb"><span class="popup-thumb-ph">Album art · 1×1</span></div>
+      <div class="popup-body">
+        <p>There's a kid in Dharavi who knows every word of Mere Gully Mein.</p>
+        <p>He doesn't own a Divine t-shirt. And he never will.</p>
+        <p>Not because he can't afford it. Because a ₹500 t-shirt doesn't feel like Divine. And somewhere, deep down, even Divine knows this.</p>
+        <p>That's the insight. And that's where this entire strategy is built from.</p>
+
+        <h2>The Problem Nobody's<br/><em>Talking About</em></h2>
+        <p>Divine wears Amiri. He wears Gucci. He built a brand on scarcity, struggle, and street credibility.</p>
+        <p>And then Gully Gang sells a ₹1000 graphic tee.</p>
+        <p>That's not a merch strategy. That's brand dilution dressed up as a revenue stream. Every cheap drop chips away at the mythology Divine spent years building. Most creative directors would double down on it. Add more SKUs. Do a festival collab. Maybe a concert film.</p>
+        <p>We're not doing any of that.</p>
+
+        <h2>The <em>Play</em></h2>
+        <p>We're not launching merch. We're engineering a cultural moment.</p>
+        <p>It starts with one decision that most creative directors would never make:</p>
+        <p>We don't go to Nike. We don't go to Adidas. We go to Gully Labs.</p>
+        <p>And if you haven't heard of Gully Labs yet, that's exactly the point.</p>
+        <p>Gully Labs is one of India's most quietly exciting independent sneaker labels. No celebrity endorsements. No mall presence. No algorithmic marketing. Just clean design, deliberate drops, and a community that treats their sneakers less like footwear and more like cultural artifacts.</p>
+        <p>They have a shoe lineup called Baaz.</p>
+        <p>Read that again.</p>
+
+        <div class="popup-ph-img"><span>Gully Labs — 1×1</span></div>
+
+        <div class="popup-pull"><p>Baaz. Divine's most iconic record. Baazigar. The mythology he built his entire identity around.</p></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:24px 0;">
+          <div class="popup-ph-img" style="margin:0;"><span>Baaz — 1×1</span></div>
+          <div class="popup-ph-img" style="margin:0;"><span>Baaz — 1×1</span></div>
+        </div>
+
+        <p>This isn't a collab. This is a convergence. Two brands that were built from the streets, for the streets, whose names were practically destined to exist in the same sentence. Gully Gang x Gully Labs isn't a partnership you pitch in a boardroom. It's a story that writes itself.</p>
+        <p>Here's how we build it:</p>
+        <ul>
+          <li><span class="popup-li-dot">—</span>No announcement. The collab is never officially confirmed until the shoe drops. Every piece of communication before that is designed to make the audience feel like they're discovering something, not being sold something.</li>
+          <li><span class="popup-li-dot">—</span>The name stays Baaz. We don't rename it. We don't co-brand it aggressively. The shoe lives within Gully Labs' existing lineup but carries Divine's DNA in every design detail — the materials, the colorway, the craftsmanship rooted in his story.</li>
+          <li><span class="popup-li-dot">—</span>The design language is deliberate. Every element connects to a chapter of Nange Pair — the documentary we're building in parallel. The sole. The lace color. The insole print. Each one a reference that only makes sense once you've watched the series.</li>
+          <li><span class="popup-li-dot">—</span>The collab is positioned as convergence, not commerce. Two things that were always meant to exist together finally did. Not "Divine drops a shoe." But "Baaz found its voice."</li>
+        </ul>
+        <p>And honestly? That positioning alone does more work than any campaign budget could.</p>
+
+        <h2>Before the Shoe,<br/><em>the Man</em></h2>
+        <p>Before anyone sees the shoe though, they see the man.</p>
+        <p>We launch a documentary series. <strong>Nange Pair.</strong></p>
+        <p>Not the recycled rags-to-riches narrative that every hip-hop documentary defaults to. A deeper cut. The untold threads. The tension between the streets that made him and the stages that claimed him. Each episode structured around a theme that connects directly to the Baaz shoe — without ever showing it.</p>
+        <ul>
+          <li><span class="popup-li-dot">—</span>Episode 1: The streets he ran on barefoot</li>
+          <li><span class="popup-li-dot">—</span>Episode 2: The first time he wore something that felt like him</li>
+          <li><span class="popup-li-dot">—</span>Episode 3: What it means to build something that lasts</li>
+        </ul>
+
+        <div class="popup-ph-169"><span style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#ccc;">Nange Pair — Documentary thumbnail · 16×9</span></div>
+        <p class="popup-img-caption">Nange Pair — the series that drops one month before the tour.</p>
+
+        <p>Each episode ends with a loose thread that pulls toward something. The audience knows something is coming. They just don't know what. And that feeling? That's the whole game.</p>
+        <p>The series drops one month before the tour. The tour is called Nange Pair.</p>
+
+        <div class="popup-dark"><p>And at every concert on this tour, <strong>Divine performs barefoot.</strong> No press release. No explanation. Just the image — and the internet does the rest. The documentary starts trending. The Baaz collab becomes the most anticipated drop in Indian sneaker history before a single product photo exists.</p></div>
+
+        <p>We feed the algorithm just enough:</p>
+        <ul>
+          <li><span class="popup-li-dot">—</span>A blurry first look posted from a studio session</li>
+          <li><span class="popup-li-dot">—</span>A Gully Labs employee spotted wearing something unfamiliar</li>
+          <li><span class="popup-li-dot">—</span>A single frame in the Nange Pair trailer where the shoe is half in frame for 0.3 seconds</li>
+        </ul>
+        <p>Controlled chaos. Maximum surface tension.</p>
+        <p>Then we release 222 pairs. One date. No ads. No influencers. No restock.</p>
+        <div class="popup-pull"><p>The resale market becomes the PR campaign.</p></div>
+
+        <h2>The <em>Concept</em></h2>
+        <p>Here is what the Baaz shoe looks like when mythology becomes material.</p>
+        <div class="popup-ph-grid">
+          <div class="popup-ph-45"><span style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ccc;">Concept 01</span></div>
+          <div class="popup-ph-45"><span style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ccc;">Concept 02</span></div>
+          <div class="popup-ph-45"><span style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ccc;">Concept 03</span></div>
+          <div class="popup-ph-45"><span style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ccc;">Concept 04</span></div>
+          <div class="popup-ph-45"><span style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ccc;">Concept 05</span></div>
+          <div class="popup-ph-45"><span style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ccc;">Concept 06</span></div>
+        </div>
+        <p class="popup-img-caption">Baaz — 222 pairs. One date. No restock.</p>
+
+        <h2>Why This <em>Works</em></h2>
+        <p>This is what separates brand architecture from brand management.</p>
+        <p>Most labels and creative teams optimise for short-term liquidity — merch drops, festival revenue, streaming numbers. What they miss is the compounding value of mythologised scarcity. Travis Scott didn't become a billionaire brand because he made good music. He became one because every touchpoint — the tour, the documentary, the shoe, the chaos at the drop — fed a singular, consistent narrative.</p>
+        <p>Divine already has the raw material. The street credibility. The cultural resonance. The audience that treats his story like scripture.</p>
+        <p>This strategy doesn't manufacture hype. It organises what already exists into a sequence that builds irreversible cultural equity.</p>
+        <div class="popup-dark"><p><strong>222 pairs. No ads. No dilution.</strong><br/>Just a mythology, engineered deliberately.</p></div>
+      </div>
+    </div>
+    <div class="popup-cta-bar">
+      <span class="popup-cta-note">Written by Vishal Joshi · RareLabs</span>
+      <a href="/strategy/free-audit.html" class="popup-cta-btn">Design your own play</a>
+    </div>
+  </div>
+</div>
 
 <script>
 const fus=document.querySelectorAll('.fu');
@@ -495,6 +702,10 @@ track.addEventListener('mousedown',e=>{isDown=true;track.style.cursor='grabbing'
 track.addEventListener('mouseleave',()=>{isDown=false;track.style.cursor='grab';});
 track.addEventListener('mouseup',()=>{isDown=false;track.style.cursor='grab';});
 track.addEventListener('mousemove',e=>{if(!isDown)return;e.preventDefault();const x=e.pageX-track.offsetLeft;const walk=(x-startX)*1.5;track.scrollLeft=scrollLeft-walk;});
+
+document.getElementById('blogPopup').addEventListener('click',function(e){
+  if(e.target===this)this.classList.remove('open');
+});
 </script>
 </body>
 </html>
