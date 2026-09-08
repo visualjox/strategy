@@ -127,7 +127,8 @@ footer{padding:24px 48px;display:flex;justify-content:space-between;align-items:
     <div class="options">
       <div class="option" onclick="selectOption(this, 'q1', 'fail')"><div class="option-box"><span class="option-tick">✓</span></div><span class="option-text">Below Rs.10 lakh</span></div>
       <div class="option" onclick="selectOption(this, 'q1', 'fail')"><div class="option-box"><span class="option-tick">✓</span></div><span class="option-text">Rs.10 lakh to Rs.25 lakh</span></div>
-      <div class="option" onclick="selectOption(this, 'q1', 'pass')"><div class="option-box"><span class="option-tick">✓</span></div><span class="option-text">Rs.25 lakh to Rs.1 crore</span></div>
+      <div class="option" onclick="selectOption(this, 'q1', 'pass')"><div class="option-box"><span class="option-tick">✓</span></div><span class="option-text">Rs.25 lakh to Rs.50 lakh</span></div>
+      <div class="option" onclick="selectOption(this, 'q1', 'pass')"><div class="option-box"><span class="option-tick">✓</span></div><span class="option-text">Rs.50 lakh to Rs.1 crore</span></div>
       <div class="option" onclick="selectOption(this, 'q1', 'pass')"><div class="option-box"><span class="option-tick">✓</span></div><span class="option-text">Above Rs.1 crore</span></div>
     </div>
     <button class="next-btn" id="next-q1" onclick="nextQuestion('q1', 'q2')">Next →</button>
@@ -135,13 +136,14 @@ footer{padding:24px 48px;display:flex;justify-content:space-between;align-items:
 
   <!-- Q2 -->
   <div class="question" id="q2">
-    <span class="question-num">02 — Marketing Spend</span>
-    <div class="question-text">How much are you spending on marketing, ads and content every month — combined?</div>
+    <span class="question-num">02 — Ad Spend</span>
+    <div class="question-text">What is your current monthly Meta or Google ad spend?</div>
     <div class="options">
       <div class="option" onclick="selectOption(this, 'q2', 'fail')"><div class="option-box"><span class="option-tick">✓</span></div><span class="option-text">Nothing yet</span></div>
-      <div class="option" onclick="selectOption(this, 'q2', 'fail')"><div class="option-box"><span class="option-tick">✓</span></div><span class="option-text">Below Rs.25,000</span></div>
-      <div class="option" onclick="selectOption(this, 'q2', 'pass')"><div class="option-box"><span class="option-tick">✓</span></div><span class="option-text">Rs.25,000 to Rs.1 lakh</span></div>
-      <div class="option" onclick="selectOption(this, 'q2', 'pass')"><div class="option-box"><span class="option-tick">✓</span></div><span class="option-text">Above Rs.1 lakh</span></div>
+      <div class="option" onclick="selectOption(this, 'q2', 'fail')"><div class="option-box"><span class="option-tick">✓</span></div><span class="option-text">Below Rs.50,000</span></div>
+      <div class="option" onclick="selectOption(this, 'q2', 'fail')"><div class="option-box"><span class="option-tick">✓</span></div><span class="option-text">Rs.50,000 to Rs.1.5 lakh</span></div>
+      <div class="option" onclick="selectOption(this, 'q2', 'pass')"><div class="option-box"><span class="option-tick">✓</span></div><span class="option-text">Rs.1.5 lakh to Rs.4 lakh</span></div>
+      <div class="option" onclick="selectOption(this, 'q2', 'pass')"><div class="option-box"><span class="option-tick">✓</span></div><span class="option-text">Above Rs.4 lakh</span></div>
     </div>
     <button class="next-btn" id="next-q2" onclick="nextQuestion('q2', 'q3')">Next →</button>
   </div>
