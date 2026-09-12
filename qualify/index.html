@@ -208,7 +208,21 @@ footer{padding:24px 48px;display:flex;justify-content:space-between;align-items:
     <a href="https://cal.com/rarelabsbyjojo/30min" class="cal-btn" target="_blank">Book a Discovery Call</a>
     <span class="cal-note">30 minutes. Free. On your schedule.</span>
   </div>
-
+<!-- EMAIL GATEWAY -->
+<div class="result-screen" id="screen-email-gate">
+  <div class="disq-block">
+    <span class="disq-eyebrow">One last thing</span>
+    <h2 class="disq-title">Leave your email before you go.</h2>
+    <div class="disq-body">
+      <p>We will reach out when the timing is right.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-top:24px;">
+      <input type="email" id="disqEmail" class="gate-input" placeholder="hello@yourbrand.com" style="width:100%;"/>
+      <div class="error-msg" id="disqEmailError" style="display:none;">Please enter a valid email address.</div>
+      <button class="gate-btn" onclick="submitDisqEmail()">Submit</button>
+    </div>
+  </div>
+</div>
   <!-- DISQUALIFIED A — revenue/spend too low -->
   <div class="result-screen" id="screen-disq-a">
     <div class="disq-block">
@@ -219,8 +233,6 @@ footer{padding:24px 48px;display:flex;justify-content:space-between;align-items:
         <p>What will serve you right now — our free ad audit. Run your next ad through it before you spend a rupee. It will tell you exactly what is broken before the money goes behind it.</p>
         <p>We have added you to our list. When the time is right, you will know where to find us.</p>
       </div>
-      <a href="/free-audit.html" class="disq-cta">Run your free audit</a>
-      <span class="disq-cta-note">No email required to start.</span>
     </div>
   </div>
 
@@ -234,8 +246,6 @@ footer{padding:24px 48px;display:flex;justify-content:space-between;align-items:
         <p>If the thinking is what you are after — and you are the person who can act on it — come back when that is the brief. We will be here.</p>
         <p>We have added you to our list.</p>
       </div>
-      <a href="/#playbook" class="disq-cta">Read The Playbook</a>
-      <span class="disq-cta-note">See how we think before deciding.</span>
     </div>
   </div>
 
@@ -294,13 +304,29 @@ function showResult() {
 
   if (failCount === 0) {
     document.getElementById('screen-qualified').classList.add('active');
-  } else if (revenueOrSpendFail) {
-    document.getElementById('screen-disq-a').classList.add('active');
-    subscribeToList('revenue');
   } else {
-    document.getElementById('screen-disq-b').classList.add('active');
-    subscribeToList('mindset');
+    window._disqType = revenueOrSpendFail ? 'revenue' : 'mindset';
+    document.getElementById('screen-email-gate').classList.add('active');
   }
+}
+  async function submitDisqEmail() {
+  const email = document.getElementById('disqEmail').value.trim().toLowerCase();
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+    document.getElementById('disqEmailError').style.display='block';
+    return;
+  }
+  document.getElementById('disqEmailError').style.display='none';
+  try {
+    await fetch(`${SUPABASE_URL}/functions/v1/subscribe`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'apikey': SUPABASE_ANON_KEY},
+      body: JSON.stringify({email, disq_type: window._disqType, source: 'qualifier'})
+    });
+  } catch(e) {}
+  document.getElementById('screen-email-gate').classList.remove('active');
+  const nextScreen = window._disqType === 'revenue' ? 'screen-disq-a' : 'screen-disq-b';
+  document.getElementById(nextScreen).classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
 }
 </script>
 </body>
