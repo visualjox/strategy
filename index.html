@@ -453,30 +453,68 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
   </div>
 </section>
 
-<!-- THE cookbook -->
-<section class="cookbook-section" id="cookbook">
+<!-- THE COOKBOOK -->
+<section class="playbook-section" id="playbook">
   <div class="fu">
     <span class="section-eyebrow">The Cookbook</span>
     <div class="section-title">Recipes that<br/><em>never fall flat.</em></div>
   </div>
-  <div class="play-card fu d1" onclick="document.getElementById('blogPopup').classList.add('open')">
-    <div class="play-thumb">
-      <img src="divinexgullylab.png" alt=""/>
-    </div>
-    <div class="play-content">
-      <div>
-        <span class="play-eyebrow">Brand Strategy · Hip-Hop · Culture</span>
-        <div class="play-title-wrap">
-          <div class="play-title">Inside the Lab: How I'd Own Hip-Hop Culture if I Ran Gully Gang</div>
-          <span class="new-tag">New</span>
+ 
+  <div style="position:relative;" class="fu d1">
+ 
+    <!-- BLOG CARD CAROUSEL -->
+    <div id="playCard0" class="play-card" onclick="document.getElementById('blogPopup0').classList.add('open')" style="display:grid;">
+      <div class="play-thumb">
+        <img src="divinexgullylab.png" alt=""/>
+      </div>
+      <div class="play-content">
+        <div>
+          <span class="play-eyebrow">Brand Strategy · Hip-Hop · Culture</span>
+          <div class="play-title-wrap">
+            <div class="play-title">Inside the Lab: How I'd Own Hip-Hop Culture if I Ran Gully Gang</div>
+            <span class="new-tag">New</span>
+          </div>
+          <p class="play-subtitle">How Gully Gang could engineer a cultural moment instead of selling merch.</p>
         </div>
-        <p class="play-subtitle">How Gully Gang could engineer a cultural moment instead of selling merch.</p>
-      </div>
-      <div class="play-bottom">
-        <span class="play-meta">Vishal Joshi &nbsp;·&nbsp; 7 min read</span>
-        <button class="play-read-btn">Read the recipe →</button>
+        <div class="play-bottom">
+          <span class="play-meta">Vishal Joshi &nbsp;·&nbsp; 7 min read</span>
+          <button class="play-read-btn">Read the recipe →</button>
+        </div>
       </div>
     </div>
+ 
+    <div id="playCard1" class="play-card" onclick="document.getElementById('blogPopup1').classList.add('open')" style="display:none;">
+      <div class="play-thumb">
+        <div style="width:100%;height:100%;background:#e8c73a;display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#b8960a;">Thumbnail coming soon</span>
+        </div>
+      </div>
+      <div class="play-content">
+        <div>
+          <span class="play-eyebrow">Brand Strategy · D2C · Health</span>
+          <div class="play-title-wrap">
+            <div class="play-title">Rags to Riches: How I'd Grow an Electrolyte Brand Without Spending a Single Rupee on Ads</div>
+            <span class="new-tag">New</span>
+          </div>
+          <p class="play-subtitle">90% of India is dehydrated. And everyone's fighting over the 10% who already know what an electrolyte is.</p>
+        </div>
+        <div class="play-bottom">
+          <span class="play-meta">Vishal Joshi &nbsp;·&nbsp; 8 min read</span>
+          <button class="play-read-btn">Read the recipe →</button>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- ARROWS -->
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px;">
+      <button onclick="switchPlayCard(-1)" style="background:#0a0a0a;color:#fddb4c;border:none;font-size:18px;font-weight:700;padding:10px 20px;cursor:pointer;transition:background 0.2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#0a0a0a'">←</button>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <div id="dot0" style="width:8px;height:8px;border-radius:50%;background:#0a0a0a;transition:background 0.2s;"></div>
+        <div id="dot1" style="width:8px;height:8px;border-radius:50%;background:#ccc;transition:background 0.2s;"></div>
+      </div>
+      <button onclick="switchPlayCard(1)" style="background:#0a0a0a;color:#fddb4c;border:none;font-size:18px;font-weight:700;padding:10px 20px;cursor:pointer;transition:background 0.2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#0a0a0a'">→</button>
+    </div>
+ 
   </div>
 </section>
 
@@ -549,116 +587,168 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
   <span class="footer-copy">© 2026 Vishal Joshi. All rights reserved.</span>
 </footer>
 
-<!-- BLOG POPUP -->
-<div class="popup-overlay" id="blogPopup">
+<!-- BLOG POPUP 0 — DIVINE -->
+<div class="popup-overlay" id="blogPopup0">
   <div class="popup-window">
     <div class="popup-header">
       <div style="display:flex;align-items:baseline;">
         <span class="logo-rare" style="font-size:16px;">Rare</span><span class="logo-labs" style="font-size:16px;">Labs</span>
-        <span class="popup-header-section">The cookbook</span>
+        <span class="popup-header-section">The Cookbook</span>
       </div>
-      <button class="popup-close" onclick="document.getElementById('blogPopup').classList.remove('open')">✕</button>
+      <button class="popup-close" onclick="document.getElementById('blogPopup0').classList.remove('open')">✕</button>
     </div>
     <div class="popup-scroll">
       <span class="popup-eyebrow">Brand Strategy · Hip-Hop · Culture</span>
-      <h1 class="popup-title">Outside the Box:<br/><em>How I'd Own Hip-Hop<br/>Culture if I Ran Gully Gang</em></h1>
+      <h1 class="popup-title">Inside the Lab:<br/><em>How I'd Own Hip-Hop<br/>Culture if I Ran Gully Gang</em></h1>
       <p class="popup-subtitle">How Gully Gang could engineer a cultural moment instead of selling merch.</p>
       <div class="popup-meta">
         <span><strong>Vishal Joshi</strong></span>
         <span>Brand Strategy</span>
         <span>7 min read</span>
       </div>
-      <div class="popup-thumb"><span class="popup-thumb-ph">Album art coming soon</span></div>
+      <div class="popup-thumb"><span class="popup-thumb-ph">Album art · 1×1</span></div>
       <div class="popup-body">
         <p>There's a kid in Dharavi who knows every word of Mere Gully Mein.</p>
         <p>He doesn't own a Divine t-shirt. And he never will.</p>
         <p>Not because he can't afford it. Because a ₹500 t-shirt doesn't feel like Divine. And somewhere, deep down, even Divine knows this.</p>
         <p>That's the insight. And that's where this entire strategy is built from.</p>
-
+        <div class="popup-ph-img"><span>Gully Labs — 1×1</span></div>
         <h2>The Problem Nobody's<br/><em>Talking About</em></h2>
         <p>Divine wears Amiri. He wears Gucci. He built a brand on scarcity, struggle, and street credibility.</p>
         <p>And then Gully Gang sells a ₹1000 graphic tee.</p>
-        <p>That's not a merch strategy. That's brand dilution dressed up as a revenue stream. Every cheap drop chips away at the mythology Divine spent years building. Most creative directors would double down on it. Add more SKUs. Do a festival collab. Maybe a concert film.</p>
-        <p>We're not doing any of that.</p>
-
+        <p>That's not a merch strategy. That's brand dilution dressed up as a revenue stream. Every cheap drop chips away at the mythology Divine spent years building.</p>
         <h2>The <em>Play</em></h2>
-        <p>We're not launching merch. We're engineering a cultural moment.</p>
-        <p>It starts with one decision that most creative directors would never make:</p>
         <p>We don't go to Nike. We don't go to Adidas. We go to Gully Labs.</p>
-        <p>And if you haven't heard of Gully Labs yet, that's exactly the point.</p>
-        <p>Gully Labs is one of India's most quietly exciting independent sneaker labels. No celebrity endorsements. No mall presence. No algorithmic marketing. Just clean design, deliberate drops, and a community that treats their sneakers less like footwear and more like cultural artifacts.</p>
-        <p>They have a shoe lineup called Baaz.</p>
-        <p>Read that again.</p>
-
-        <div class="popup-ph-img"><img src="gl_logo.png" alt="" style="width:100%;height:100%;object-fit:contain;padding:24px;"/></div>
-
         <div class="popup-pull"><p>Baaz. Divine's most iconic record. Baazigar. The mythology he built his entire identity around.</p></div>
-
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:24px 0;">
-         <div class="popup-ph-img" style="margin:0;"><img src="gl_baaz.png" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>           <div class="popup-ph-img" style="margin:0;"><img src="baazigar.jpg" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
+          <div class="popup-ph-img" style="margin:0;"><img src="gl_baaz.png" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
+          <div class="popup-ph-img" style="margin:0;"><img src="baazigar.jpg" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
         </div>
-
-        <p>This isn't a collab. This is a convergence. Two brands that were built from the streets, for the streets, whose names were practically destined to exist in the same sentence. Gully Gang x Gully Labs isn't a partnership you pitch in a boardroom. It's a story that writes itself.</p>
-        <p>Here's how we build it:</p>
+        <p>This isn't a collab. This is a convergence. Two brands built from the streets, for the streets. Gully Gang x Gully Labs isn't a partnership you pitch in a boardroom. It's a story that writes itself.</p>
         <ul>
-          <li><span class="popup-li-dot">—</span>No announcement. The collab is never officially confirmed until the shoe drops. Every piece of communication before that is designed to make the audience feel like they're discovering something, not being sold something.</li>
-          <li><span class="popup-li-dot">—</span>The name stays Baaz. We don't rename it. We don't co-brand it aggressively. The shoe lives within Gully Labs' existing lineup but carries Divine's DNA in every design detail — the materials, the colorway, the craftsmanship rooted in his story.</li>
-          <li><span class="popup-li-dot">—</span>The design language is deliberate. Every element connects to a chapter of Nange Pair — the documentary we're building in parallel. The sole. The lace color. The insole print. Each one a reference that only makes sense once you've watched the series.</li>
-          <li><span class="popup-li-dot">—</span>The collab is positioned as convergence, not commerce. Two things that were always meant to exist together finally did. Not "Divine drops a shoe." But "Baaz found its voice."</li>
+          <li><span class="popup-li-dot">—</span>No announcement. The collab is never officially confirmed until the shoe drops.</li>
+          <li><span class="popup-li-dot">—</span>The name stays Baaz. The shoe carries Divine's DNA in every design detail.</li>
+          <li><span class="popup-li-dot">—</span>Every element connects to a chapter of Nange Pair — the documentary built in parallel.</li>
+          <li><span class="popup-li-dot">—</span>Positioned as convergence, not commerce. Not "Divine drops a shoe." But "Baaz found its voice."</li>
         </ul>
-        <p>And honestly? That positioning alone does more work than any campaign budget could.</p>
-
         <h2>Before the Shoe,<br/><em>the Man</em></h2>
-        <p>Before anyone sees the shoe though, they see the man.</p>
         <p>We launch a documentary series. <strong>Nange Pair.</strong></p>
-        <p>Not the recycled rags-to-riches narrative that every hip-hop documentary defaults to. A deeper cut. The untold threads. The tension between the streets that made him and the stages that claimed him. Each episode structured around a theme that connects directly to the Baaz shoe — without ever showing it.</p>
         <ul>
           <li><span class="popup-li-dot">—</span>Episode 1: The streets he ran on barefoot</li>
           <li><span class="popup-li-dot">—</span>Episode 2: The first time he wore something that felt like him</li>
           <li><span class="popup-li-dot">—</span>Episode 3: What it means to build something that lasts</li>
         </ul>
-
-        <div class="popup-ph-169"><img src="doc_thumb.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
-        <p class="popup-img-caption">Nange Pair — the series that drops one month before the tour.</p>
-
-        <p>Each episode ends with a loose thread that pulls toward something. The audience knows something is coming. They just don't know what. And that feeling? That's the whole game.</p>
-        <p>The series drops one month before the tour. The tour is called Nange Pair.</p>
-
-        <div class="popup-dark"><p>And at every concert on this tour, <strong>Divine performs barefoot.</strong> No press release. No explanation. Just the image — and the internet does the rest. The documentary starts trending. The Baaz collab becomes the most anticipated drop in Indian sneaker history before a single product photo exists.</p></div>
-
-        <p>We feed the algorithm just enough:</p>
-        <ul>
-          <li><span class="popup-li-dot">—</span>A blurry first look posted from a studio session</li>
-          <li><span class="popup-li-dot">—</span>A Gully Labs employee spotted wearing something unfamiliar</li>
-          <li><span class="popup-li-dot">—</span>A single frame in the Nange Pair trailer where the shoe is half in frame for 0.3 seconds</li>
-        </ul>
-        <p>Controlled chaos. Maximum surface tension.</p>
+        <div class="popup-ph-169"><span style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#ccc;">Nange Pair — Documentary thumbnail · 16×9</span></div>
+        <div class="popup-dark"><p>And at every concert on this tour, <strong>Divine performs barefoot.</strong> No press release. No explanation. Just the image — and the internet does the rest.</p></div>
         <p>Then we release 222 pairs. One date. No ads. No influencers. No restock.</p>
         <div class="popup-pull"><p>The resale market becomes the PR campaign.</p></div>
-
         <h2>The <em>Concept</em></h2>
-        <p>Here is what the Baaz shoe looks like when mythology becomes material.</p>
         <div class="popup-ph-grid">
-<div class="popup-ph-45"><img src="cp1.png" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
-<div class="popup-ph-45"><img src="cp2.png" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
-<div class="popup-ph-45"><img src="cp3.png" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
-<div class="popup-ph-45"><img src="cp4.png" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
-<div class="popup-ph-45"><img src="cp5.png" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
-<div class="popup-ph-45"><img src="cp6.png" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
+          <div class="popup-ph-45"><img src="cp1.png" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
+          <div class="popup-ph-45"><img src="cp2.png" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
+          <div class="popup-ph-45"><img src="cp3.png" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
+          <div class="popup-ph-45"><img src="cp4.png" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
+          <div class="popup-ph-45"><img src="cp5.png" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
+          <div class="popup-ph-45"><img src="cp6.png" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
         </div>
-        <p class="popup-img-caption">Baaz — 222 pairs. One date. No restock.</p>
-
         <h2>Why This <em>Works</em></h2>
-        <p>This is what separates brand architecture from brand management.</p>
-        <p>Most labels and creative teams optimise for short-term liquidity — merch drops, festival revenue, streaming numbers. What they miss is the compounding value of mythologised scarcity. Travis Scott didn't become a billionaire brand because he made good music. He became one because every touchpoint — the tour, the documentary, the shoe, the chaos at the drop — fed a singular, consistent narrative.</p>
-        <p>Divine already has the raw material. The street credibility. The cultural resonance. The audience that treats his story like scripture.</p>
-        <p>This strategy doesn't manufacture hype. It organises what already exists into a sequence that builds irreversible cultural equity.</p>
+        <p>This is what separates brand architecture from brand management. Divine already has the raw material. The street credibility. The cultural resonance. The audience that treats his story like scripture.</p>
         <div class="popup-dark"><p><strong>222 pairs. No ads. No dilution.</strong><br/>Just a mythology, engineered deliberately.</p></div>
       </div>
     </div>
     <div class="popup-cta-bar">
       <span class="popup-cta-note">Written by Vishal Joshi · RareLabs</span>
-      <a href="#qualify" class="popup-cta-btn" onclick="document.getElementById('blogPopup').classList.remove('open')">Build your own recipe</a>
+      <a href="#qualify" class="popup-cta-btn" onclick="document.getElementById('blogPopup0').classList.remove('open')">Design your own play</a>
+    </div>
+  </div>
+</div>
+ 
+<!-- BLOG POPUP 1 — ELECTROLYTE -->
+<div class="popup-overlay" id="blogPopup1">
+  <div class="popup-window">
+    <div class="popup-header">
+      <div style="display:flex;align-items:baseline;">
+        <span class="logo-rare" style="font-size:16px;">Rare</span><span class="logo-labs" style="font-size:16px;">Labs</span>
+        <span class="popup-header-section">The Cookbook</span>
+      </div>
+      <button class="popup-close" onclick="document.getElementById('blogPopup1').classList.remove('open')">✕</button>
+    </div>
+    <div class="popup-scroll">
+      <span class="popup-eyebrow">Brand Strategy · D2C · Health</span>
+      <h1 class="popup-title">Rags to Riches:<br/><em>How I'd Grow an Electrolyte Brand Without Spending a Single Rupee on Ads</em></h1>
+      <p class="popup-subtitle">90% of India is dehydrated. And everyone's fighting over the 10% who already know what an electrolyte is.</p>
+      <div class="popup-meta">
+        <span><strong>Vishal Joshi</strong></span>
+        <span>Brand Strategy</span>
+        <span>8 min read</span>
+      </div>
+      <div class="popup-body">
+        <p>Walk into any supplement store right now.</p>
+        <p>Every shelf looks the same. Packets of different colours, different names, same product. And on Instagram, every founder has a "building @bestelectrolytebrand" bio while praying they get attention faster than their competitor.</p>
+        <p>90% of India is dehydrated. And everyone's fighting over the 10% who already know what an electrolyte is.</p>
+        <p>That's not a market strategy. That's a race to the bottom.</p>
+        <p>So here's what I'd do instead.</p>
+        <div class="popup-ph-img"><span>Overcrowded supplement shelf · 1×1</span></div>
+ 
+        <h2>Forget the shelf.<br/><em>Find the sweat.</em></h2>
+        <p>No online store. No warehousing. No shelf space. Fuck the intermediaries — they make you expensive and complacent before you've even earned the right to be either.</p>
+        <p>Here's what I'd kill immediately:</p>
+        <ul>
+          <li><span class="popup-li-dot">—</span>Ecommerce store</li>
+          <li><span class="popup-li-dot">—</span>Warehouse costs</li>
+          <li><span class="popup-li-dot">—</span>Paid shelf space</li>
+          <li><span class="popup-li-dot">—</span>Paid ads</li>
+          <li><span class="popup-li-dot">—</span>Manufactured content</li>
+        </ul>
+        <p>And here's what I'd replace it with:</p>
+        <ul>
+          <li><span class="popup-li-dot">—</span>100 run club DMs</li>
+          <li><span class="popup-li-dot">—</span>A mocktail bar on race day</li>
+          <li><span class="popup-li-dot">—</span>Real people. Real sweat. Real feedback.</li>
+        </ul>
+        <p>Because fun will always triumph function. If they can't touch it, feel it, or taste it — it doesn't exist.</p>
+        <div class="popup-ph-img"><span>Run club mid-race · 1×1</span></div>
+        <div class="popup-ph-img"><span>Mocktail bar at outdoor event · 1×1</span></div>
+ 
+        <h2>The only spend?<br/><em>The glass.</em></h2>
+        <p>Because the sexier the glass, the more shareable the drink. Nobody posts a paper cup. Nobody posts a packet of powder. But a beautiful, well-designed glass with a drink that looks as good as it tastes? That's content that creates itself.</p>
+        <div class="popup-ph-img"><span>Beautiful glass with vibrant mocktail · 1×1</span></div>
+        <div class="popup-ph-img"><span>Someone holding glass mid-run · 1×1</span></div>
+ 
+        <h2>Then chase the sweat<br/><em>at scale.</em></h2>
+        <p>The virality from the run clubs becomes the pitch deck. I'd tie up with:</p>
+        <ul>
+          <li><span class="popup-li-dot">—</span>HYROX — the fastest growing fitness event format in India right now</li>
+          <li><span class="popup-li-dot">—</span>City marathons — Mumbai, Delhi, Bangalore, Hyderabad</li>
+          <li><span class="popup-li-dot">—</span>Trail runs — niche, passionate, incredibly loyal communities</li>
+          <li><span class="popup-li-dot">—</span>CrossFit boxes — high spend, high trust, high word of mouth</li>
+        </ul>
+        <p>Mocktail booths at the finish line. At the podium. At the exact moment someone just pushed their body to its limit and deserves something that actually tastes like a reward.</p>
+        <div class="popup-ph-img"><span>HYROX or marathon finish line · 1×1</span></div>
+        <div class="popup-ph-img"><span>Mocktail booth at sporting event · 1×1</span></div>
+ 
+        <h2>The content<br/><em>writes itself.</em></h2>
+        <p>POV content. A colorful ingredient palette on the cart. The kind of video that gets shared in running WhatsApp groups before it hits the algorithm.</p>
+        <p>When you do something people know they could do themselves but aren't — it goes viral. Every runner watching thinks "why hasn't my run club done this?" That thought is the share.</p>
+        <div class="popup-ph-img"><span>Flat lay of electrolyte ingredients · 1×1</span></div>
+        <div class="popup-ph-img"><span>POV behind mocktail bar looking at runners · 1×1</span></div>
+ 
+        <h2>And only then —<br/><em>the drop.</em></h2>
+        <p>Once the popularity is real, once the community is built, once people are asking where they can buy it — limited drop. Best mocktail recipes. Canned versions. With a waitlist.</p>
+        <div class="popup-dark">
+          <p>Run club experience → Event virality → Waitlist signups → Limited canned drop → <strong>Ecom launch. Self-funded.</strong></p>
+        </div>
+        <p>No ads. No investors. No manufactured hype. Just a community that built itself around a drink that was too good not to share.</p>
+        <div class="popup-ph-img"><span>Sleek electrolyte can — limited edition · 1×1</span></div>
+        <div class="popup-ph-img"><span>Waitlist landing page mockup · 1×1</span></div>
+ 
+        <div class="popup-pull"><p>While everyone else is burning money on ads and praying for ROAS, I've built a brand that people discovered through experience, remembered through taste, and shared because the glass was too good not to.</p></div>
+        <div class="popup-ph-img"><span>Split: supplement shelf vs mocktail bar at marathon · 1×1</span></div>
+      </div>
+    </div>
+    <div class="popup-cta-bar">
+      <span class="popup-cta-note">Written by Vishal Joshi · RareLabs</span>
+      <a href="#qualify" class="popup-cta-btn" onclick="document.getElementById('blogPopup1').classList.remove('open')">Design your own play</a>
     </div>
   </div>
 </div>
@@ -699,9 +789,24 @@ track.addEventListener('mouseleave',()=>{isDown=false;track.style.cursor='grab';
 track.addEventListener('mouseup',()=>{isDown=false;track.style.cursor='grab';});
 track.addEventListener('mousemove',e=>{if(!isDown)return;e.preventDefault();const x=e.pageX-track.offsetLeft;const walk=(x-startX)*1.5;track.scrollLeft=scrollLeft-walk;});
 
-document.getElementById('blogPopup').addEventListener('click',function(e){
-  if(e.target===this)this.classList.remove('open');
+let currentPlayCard = 0;
+const totalPlayCards = 2;
+
+function switchPlayCard(dir) {
+  document.getElementById('playCard' + currentPlayCard).style.display = 'none';
+  document.getElementById('dot' + currentPlayCard).style.background = '#ccc';
+  currentPlayCard = (currentPlayCard + dir + totalPlayCards) % totalPlayCards;
+  document.getElementById('playCard' + currentPlayCard).style.display = 'grid';
+  document.getElementById('dot' + currentPlayCard).style.background = '#0a0a0a';
+}
+
+document.getElementById('blogPopup0').addEventListener('click', function(e) {
+  if(e.target === this) this.classList.remove('open');
 });
+document.getElementById('blogPopup1').addEventListener('click', function(e) {
+  if(e.target === this) this.classList.remove('open');
+});
+  
 </script>
 </body>
 </html>
