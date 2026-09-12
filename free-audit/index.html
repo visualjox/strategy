@@ -47,21 +47,21 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:20px 4
 .step-tab.active{color:#0a0a0a;background:#fddb4c;}
 .step-tab.done{color:#27ae60;background:#fff;}
 .main{max-width:860px;margin:0 auto;padding:56px 48px;}
-.gate{display:flex;flex-direction:column;gap:20px;}
-.gate-title{font-size:22px;font-weight:800;letter-spacing:-1px;color:#0a0a0a;}
-.gate-sub{font-size:14px;color:#555;line-height:1.7;max-width:480px;}
-.gate-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.gate-group{display:flex;flex-direction:column;gap:8px;}
-.gate-group.full{grid-column:1/-1;}
-.gate-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#0a0a0a;}
-.gate-input{padding:14px 16px;border:1.5px solid #0a0a0a;background:#fff;font-family:'Inter',sans-serif;font-size:14px;color:#0a0a0a;transition:border-color 0.2s;outline:none;border-radius:0;}
-.gate-input:focus{border-color:#fddb4c;}
-.gate-input::placeholder{color:#ccc;}
-select.gate-input{cursor:pointer;}
-.gate-btn{background:#fddb4c;color:#0a0a0a;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:16px 32px;border:none;cursor:pointer;transition:background 0.2s;align-self:flex-start;}
-.gate-btn:hover{background:#e8c73a;}
-.gate-btn:disabled{opacity:0.4;cursor:not-allowed;}
-.gate-note{font-size:12px;color:#999;font-style:italic;}
+.{display:flex;flex-direction:column;gap:20px;}
+.-title{font-size:22px;font-weight:800;letter-spacing:-1px;color:#0a0a0a;}
+.-sub{font-size:14px;color:#555;line-height:1.7;max-width:480px;}
+.-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.-group{display:flex;flex-direction:column;gap:8px;}
+.-group.full{grid-column:1/-1;}
+.-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#0a0a0a;}
+.-input{padding:14px 16px;border:1.5px solid #0a0a0a;background:#fff;font-family:'Inter',sans-serif;font-size:14px;color:#0a0a0a;transition:border-color 0.2s;outline:none;border-radius:0;}
+.-input:focus{border-color:#fddb4c;}
+.-input::placeholder{color:#ccc;}
+select.-input{cursor:pointer;}
+.-btn{background:#fddb4c;color:#0a0a0a;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:16px 32px;border:none;cursor:pointer;transition:background 0.2s;align-self:flex-start;}
+.-btn:hover{background:#e8c73a;}
+.-btn:disabled{opacity:0.4;cursor:not-allowed;}
+.-note{font-size:12px;color:#999;font-style:italic;}
 .error-msg{display:none;padding:14px 18px;background:#fff0f0;border:1.5px solid #c0392b;font-size:13px;color:#c0392b;}
 .audit-form{display:none;flex-direction:column;gap:24px;}
 .audit-form.visible{display:flex;}
@@ -223,7 +223,7 @@ footer{padding:24px 48px;display:flex;justify-content:space-between;align-items:
     <div class="gate-group full"><label class="gate-label">Email Address</label><input type="email" class="gate-input" id="gateEmail" placeholder="hello@yourbrand.com"/></div>
     <div class="error-msg" id="gateError">Please fill in all fields with a valid email address.</div>
     <button class="gate-btn" id="gateBtn" onclick="startAudit()">Continue to Audit</button>
-    <span class="gate-note">One Free Ad Audit per email. No spam.</span>
+<span class="gate-note">One Free Ad Audit per email. Your ad may be featured anonymously in our weekly breakdown. No spam.</span>
   </div>
 
   <div class="expired" id="expiredWrap">
