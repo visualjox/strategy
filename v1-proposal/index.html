@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>V1 Esports — Growth Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font-size:14px;line-height:1.8;-webkit-font-smoothing:antialiased;max-width:800px;margin:0 auto;padding:60px 48px;}
+
+.cover{min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding-bottom:60px;border-bottom:1.5px solid #0a0a0a;margin-bottom:60px;}
+.cover-top{display:flex;justify-content:space-between;align-items:flex-start;}
+.brand{font-family:'Instrument Serif',serif;font-style:italic;font-size:18px;color:#0a0a0a;}
+.cover-tag{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#999;}
+.cover-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#999;display:block;margin-bottom:24px;}
+.cover-h1{font-size:clamp(40px,6vw,72px);font-weight:900;letter-spacing:-4px;line-height:0.9;color:#0a0a0a;margin-bottom:24px;}
+.cover-h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;}
+.cover-sub{font-size:15px;color:#555;line-height:1.8;max-width:480px;margin-bottom:40px;}
+.cover-bottom{display:flex;justify-content:space-between;align-items:flex-end;}
+.cover-bottom-note{font-size:12px;color:#999;}
+
+.divider{width:100%;height:1.5px;background:#0a0a0a;margin:48px 0;}
+.divider-light{width:100%;height:1px;background:#e8e8e8;margin:32px 0;}
+.page-break{page-break-before:always;padding-top:60px;}
+
+.section{margin-bottom:56px;}
+.eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#999;display:block;margin-bottom:16px;}
+.section-title{font-size:clamp(28px,4vw,44px);font-weight:900;letter-spacing:-2px;line-height:0.95;color:#0a0a0a;margin-bottom:24px;}
+.section-title em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;}
+.body-text{font-size:14px;color:#333;line-height:1.85;margin-bottom:16px;}
+.body-text strong{color:#0a0a0a;font-weight:700;}
+
+.highlight-block{background:#fddb4c;padding:24px 28px;margin:24px 0;}
+.highlight-block p{font-size:14px;color:#0a0a0a;line-height:1.8;font-weight:500;}
+
+.dark-block{background:#0a0a0a;padding:24px 28px;margin:24px 0;}
+.dark-block p{font-size:14px;color:#fff;line-height:1.8;}
+.dark-block strong{color:#fddb4c;}
+
+.deliverable-row{display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #e8e8e8;}
+.deliverable-row:first-child{border-top:1px solid #e8e8e8;}
+.deliverable-row:last-child{border-bottom:none;}
+.deliverable-num{font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;color:#ccc;flex-shrink:0;width:28px;}
+.deliverable-title{font-size:14px;font-weight:700;color:#0a0a0a;margin-bottom:4px;}
+.deliverable-desc{font-size:12px;color:#777;line-height:1.7;}
+
+.month-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin:24px 0;}
+.month-card{background:#f5f5f5;padding:20px;}
+.month-card.dark{background:#0a0a0a;}
+.month-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#999;display:block;margin-bottom:8px;}
+.month-card.dark .month-label{color:#444;}
+.month-title{font-size:15px;font-weight:800;color:#0a0a0a;margin-bottom:10px;}
+.month-card.dark .month-title{color:#fddb4c;}
+.month-items{list-style:none;display:flex;flex-direction:column;gap:4px;}
+.month-items li{font-size:11px;color:#555;line-height:1.6;display:flex;gap:6px;}
+.month-items li::before{content:'—';color:#ccc;flex-shrink:0;}
+.month-card.dark .month-items li{color:#888;}
+
+.inclusion-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:24px 0;}
+.inclusion{background:#f5f5f5;padding:16px 20px;}
+.inclusion-num{font-size:10px;font-weight:700;letter-spacing:2px;color:#ccc;display:block;margin-bottom:6px;}
+.inclusion-title{font-size:13px;font-weight:700;color:#0a0a0a;margin-bottom:4px;}
+.inclusion-desc{font-size:11px;color:#777;line-height:1.6;}
+
+.pricing-block{border:1.5px solid #0a0a0a;padding:40px;margin:24px 0;}
+.pricing-title{font-family:'Instrument Serif',serif;font-style:italic;font-size:24px;color:#0a0a0a;margin-bottom:8px;}
+.pricing-amount{font-size:56px;font-weight:900;letter-spacing:-3px;color:#0a0a0a;line-height:1;margin-bottom:4px;}
+.pricing-note{font-size:11px;color:#999;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px;display:block;}
+.pricing-includes{list-style:none;margin-bottom:32px;}
+.pricing-includes li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#333;}
+.pricing-includes li:last-child{border-bottom:none;}
+.pricing-dash{font-family:'Instrument Serif',serif;font-style:italic;color:#999;}
+
+.not-list{list-style:none;margin:16px 0;}
+.not-list li{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#555;}
+.not-list li:last-child{border-bottom:none;}
+.check-mark{color:#27ae60;font-weight:700;flex-shrink:0;}
+
+.contact-section{border-top:1.5px solid #0a0a0a;padding-top:40px;margin-top:60px;display:flex;justify-content:space-between;align-items:flex-end;}
+.contact-brand{font-family:'Instrument Serif',serif;font-style:italic;font-size:24px;color:#0a0a0a;}
+.contact-details{text-align:right;font-size:12px;color:#999;line-height:2;}
+
+@media print{
+  body{padding:40px;}
+  .cover{min-height:auto;padding-bottom:40px;}
+  .page-break{page-break-before:always;}
+}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-top">
+    <span class="brand">RareLabs</span>
+    <span class="cover-tag">Confidential — V1 Esports</span>
+  </div>
+  <div>
+    <span class="cover-label">Growth Strategy Proposal</span>
+    <h1 class="cover-h1">From zero<br/>to<br/><em>traction.</em></h1>
+    <p class="cover-sub">A 90-day organic growth strategy for V1 Esports. Built to get real users in the first 30 days and compound from there. No ads. No manufactured hype. Just disciplined execution.</p>
+  </div>
+  <div class="cover-bottom">
+    <span class="cover-bottom-note">Prepared by RareLabs for V1 Esports</span>
+    <span class="cover-bottom-note">Confidential</span>
+  </div>
+</div>
+
+<!-- THE PROBLEM -->
+<div class="section">
+  <span class="eyebrow">The opportunity</span>
+  <h2 class="section-title">The customer exists.<br/><em>Nobody is speaking to them.</em></h2>
+  <p class="body-text">90% of India's potential gamers do not own a gaming PC. They want to play CS:GO, Valorant, GTA. They own a MacBook, an iPad, a low-spec laptop. The hardware barrier has stopped them — not the desire.</p>
+  <p class="body-text">No platform in India is talking to this person specifically. GeForce Now requires existing hardware. Xbox Cloud Gaming is not optimised for the Indian market. The frustrated potential gamer — 18 to 28, college-educated, device-owning but hardware-limited — is completely unaddressed.</p>
+  <p class="body-text">V1 Esports solves the exact problem this person has. The strategy is about making sure they know it.</p>
+  <div class="highlight-block">
+    <p>"Play any game. On any device. Without buying a gaming PC." — This is the one line that drives everything. It answers the customer's objection before they raise it.</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- WHO THIS IS FOR -->
+<div class="section">
+  <span class="eyebrow">The target customer</span>
+  <h2 class="section-title">Not the hardcore<br/><em>gamer.</em></h2>
+  <p class="body-text">The hardcore gamer already owns a Rs.80,000 gaming PC. They are not your customer.</p>
+  <p class="body-text">Your customer is the frustrated potential gamer. 18 to 28 years old. Owns a MacBook, iPad or low-spec Windows laptop. Has looked at gaming PCs and decided Rs.60,000 to Rs.1,20,000 is not worth it for a hobby. Has given up — not because they do not want to game, but because the hardware barrier felt insurmountable.</p>
+  <p class="body-text">This person exists in massive numbers across Mumbai, Pune and Bangalore. They are in colleges, co-working spaces, cafes. They will pay Rs.60 per hour to play the game they actually want — on the device they already own.</p>
+</div>
+
+<div class="divider"></div>
+
+<!-- THE APPROACH -->
+<div class="section page-break">
+  <span class="eyebrow">The approach</span>
+  <h2 class="section-title">Organic first.<br/><em>Always.</em></h2>
+  <p class="body-text">No paid ads in Month 1. The message is not proven yet. Spending on ads before organic validates the creative is burning money to find out what does not work.</p>
+  <p class="body-text">The strategy is built around one insight — the product demonstration IS the content. Someone playing CS:GO on a MacBook Air is a scroll-stopping moment. No script needed. No production budget needed. The product sells itself if it works on camera.</p>
+  <div class="dark-block">
+    <p>The best performing content in this category will always be: <strong>device + game title + it actually works.</strong> Everything else supports this. Nothing replaces it.</p>
+  </div>
+  <p class="body-text">Instagram Reels is the primary platform. YouTube Shorts is the distribution amplifier — every reel gets repurposed as a Short at zero extra effort. Reddit seeds the community in the right groups. WhatsApp retains and converts trial users to paying users.</p>
+</div>
+
+<div class="divider"></div>
+
+<!-- 90 DAY PLAN -->
+<div class="section">
+  <span class="eyebrow">The 90-day plan</span>
+  <h2 class="section-title">Three months.<br/><em>Three jobs.</em></h2>
+  <div class="month-grid">
+    <div class="month-card">
+      <span class="month-label">Month One</span>
+      <div class="month-title">Prove it works</div>
+      <ul class="month-items">
+        <li>20 reels published</li>
+        <li>Device test content series</li>
+        <li>100 community DMs</li>
+        <li>50 to 100 genuine followers</li>
+        <li>20 to 30 trial users</li>
+      </ul>
+    </div>
+    <div class="month-card dark">
+      <span class="month-label">Month Two</span>
+      <div class="month-title">Build social proof</div>
+      <ul class="month-items">
+        <li>User generated content</li>
+        <li>WhatsApp community launched</li>
+        <li>Email capture live</li>
+        <li>200 to 500 followers</li>
+        <li>First repeat paying users</li>
+      </ul>
+    </div>
+    <div class="month-card">
+      <span class="month-label">Month Three</span>
+      <div class="month-title">Own a game title</div>
+      <ul class="month-items">
+        <li>Weekly tournaments</li>
+        <li>Referral programme live</li>
+        <li>500+ followers</li>
+        <li>50 to 100 paying users</li>
+        <li>Word of mouth starting</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- WHAT IS INCLUDED -->
+<div class="section page-break">
+  <span class="eyebrow">What is included</span>
+  <h2 class="section-title">Everything they need<br/><em>to execute.</em></h2>
+  <p class="body-text">The strategy document is written so that anyone on the V1 team can open it on Day 1 and know exactly what to do in the next hour, the next day, the next week. No ambiguity. No interpretation needed.</p>
+
+  <div class="inclusion-grid">
+    <div class="inclusion">
+      <span class="inclusion-num">01</span>
+      <div class="inclusion-title">Market Reality & Positioning</div>
+      <div class="inclusion-desc">Who the real customer is, why existing players are not a threat, the one line that drives all communication.</div>
+    </div>
+    <div class="inclusion">
+      <span class="inclusion-num">02</span>
+      <div class="inclusion-title">Platform Strategy</div>
+      <div class="inclusion-desc">Instagram, YouTube Shorts, Reddit and WhatsApp — what each platform does, how to use them together.</div>
+    </div>
+    <div class="inclusion">
+      <span class="inclusion-num">03</span>
+      <div class="inclusion-title">Content Education</div>
+      <div class="inclusion-desc">What native content means, hook-retain-reward framework, hook structures that work, what kills engagement.</div>
+    </div>
+    <div class="inclusion">
+      <span class="inclusion-num">04</span>
+      <div class="inclusion-title">5 Content Series</div>
+      <div class="inclusion-desc">Named, formatted and ready to execute. Device Test, Comparison, Real People, POV, Community.</div>
+    </div>
+    <div class="inclusion">
+      <span class="inclusion-num">05</span>
+      <div class="inclusion-title">Day One Playbook</div>
+      <div class="inclusion-desc">Hour by hour, day by day instructions for the first week. Open it and execute without thinking.</div>
+    </div>
+    <div class="inclusion">
+      <span class="inclusion-num">06</span>
+      <div class="inclusion-title">30-Day Content Calendar</div>
+      <div class="inclusion-desc">Every day of Month 1 mapped. What to post, what format, what hook to use. No decisions needed.</div>
+    </div>
+    <div class="inclusion">
+      <span class="inclusion-num">07</span>
+      <div class="inclusion-title">What Not To Do</div>
+      <div class="inclusion-desc">The 10 mistakes that kill strategies like this before they start. Specific, non-obvious and critical.</div>
+    </div>
+    <div class="inclusion">
+      <span class="inclusion-num">08</span>
+      <div class="inclusion-title">Metrics That Matter</div>
+      <div class="inclusion-desc">What to track, what to ignore, how to know if it is working. The weekly review framework.</div>
+    </div>
+    <div class="inclusion">
+      <span class="inclusion-num">09</span>
+      <div class="inclusion-title">Onboarding Checklist</div>
+      <div class="inclusion-desc">Everything to set up before posting begins. Pre-flight checklist so nothing is missed on Day 1.</div>
+    </div>
+    <div class="inclusion">
+      <span class="inclusion-num">10</span>
+      <div class="inclusion-title">3 Months Monitoring + Weekly Calls</div>
+      <div class="inclusion-desc">Every Monday for 12 weeks. Review numbers, course correct, plan the next week together.</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- WHAT WE DO NOT DO -->
+<div class="section">
+  <span class="eyebrow">Clarity on scope</span>
+  <h2 class="section-title">What this is.<br/><em>What it is not.</em></h2>
+  <div class="dark-block">
+    <p>This is a <strong>strategy and accountability engagement.</strong> We build the complete playbook and stay in the game for 3 months to make sure it is executed correctly. We do not make the content. We do not manage the Instagram account. We do not run ads.</p>
+  </div>
+  <ul class="not-list">
+    <li><span class="check-mark">✓</span>Complete 90-day strategy document — written to be executed without interpretation</li>
+    <li><span class="check-mark">✓</span>Content education — hook structures, native content principles, what works and what does not</li>
+    <li><span class="check-mark">✓</span>30-day content calendar — every day mapped with specific formats and hooks</li>
+    <li><span class="check-mark">✓</span>Weekly Monday calls for 12 weeks — review, course correct, plan ahead</li>
+    <li><span class="check-mark">✓</span>Accountability — if the strategy is followed and results are off track, we adjust together</li>
+  </ul>
+</div>
+
+<div class="divider"></div>
+
+<!-- THE ACCOUNTABILITY CLAUSE -->
+<div class="section page-break">
+  <span class="eyebrow">How this works</span>
+  <h2 class="section-title">Follow it.<br/><em>We adjust together.</em></h2>
+  <p class="body-text">If the strategy is followed exactly — posting cadence maintained, content formats used, weekly calls attended — and results are not on track by the end of any month, we revisit and adjust together. The strategy is a living document.</p>
+  <div class="highlight-block">
+    <p>If the strategy is not followed — posting missed, formats ignored, calls skipped — no adjustments are made. Results in that scenario are the result of execution failure, not strategy failure. The engagement continues as planned.</p>
+  </div>
+  <p class="body-text">This clause protects both parties. The strategy works when executed. It does not work when ignored.</p>
+</div>
+
+<div class="divider"></div>
+
+<!-- PRICING -->
+<div class="section">
+  <span class="eyebrow">The investment</span>
+  <h2 class="section-title">One engagement.<br/><em>One price.</em></h2>
+  <div class="pricing-block">
+    <div class="pricing-title">V1 Esports — 90-Day Growth Strategy</div>
+    <div class="pricing-amount">>₹54,999</div>
+    <span class="pricing-note">Fixed fee · One-time engagement</span>
+    <ul class="pricing-includes">
+      <li><span class="pricing-dash">—</span>Complete 90-day strategy document</li>
+      <li><span class="pricing-dash">—</span>Market reality and positioning</li>
+      <li><span class="pricing-dash">—</span>Platform strategy across Instagram, YouTube Shorts, Reddit, WhatsApp</li>
+      <li><span class="pricing-dash">—</span>Content education — hook-retain-reward framework</li>
+      <li><span class="pricing-dash">—</span>5 content series with names, formats and examples</li>
+      <li><span class="pricing-dash">—</span>Day one playbook — hour by hour instructions</li>
+      <li><span class="pricing-dash">—</span>30-day content calendar — every day mapped</li>
+      <li><span class="pricing-dash">—</span>What not to do — 10 critical mistakes</li>
+      <li><span class="pricing-dash">—</span>Metrics framework — what to track and what to ignore</li>
+      <li><span class="pricing-dash">—</span>Onboarding checklist</li>
+      <li><span class="pricing-dash">—</span>12 weekly Monday calls over 3 months</li>
+      <li><span class="pricing-dash">—</span>Course correction if strategy is followed and results are off track</li>
+    </ul>
+  </div>
+  <div class="highlight-block">
+    <p>The ad budget alone is Rs.30,000 to Rs.50,000 per month. This strategy tells you exactly what message to put behind those ads when the time comes — so the money goes behind something proven, not something guessed.</p>
+  </div>
+</div>
+
+<div class="contact-section">
+  <div class="contact-brand">RareLabs</div>
+  <div class="contact-details">
+    rarelabsbyjojo.com<br/>
+    @admasterjojo
+  </div>
+</div>
+
+</body>
+</html>
