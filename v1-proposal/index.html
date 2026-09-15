@@ -9,9 +9,12 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font-size:14px;line-height:1.8;-webkit-font-smoothing:antialiased;max-width:800px;margin:0 auto;padding:60px 48px;}
 
+.logo-rare{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;letter-spacing:-2px;}
+.logo-labs{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-1px;}
+
 .cover{min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding-bottom:60px;border-bottom:1.5px solid #0a0a0a;margin-bottom:60px;}
 .cover-top{display:flex;justify-content:space-between;align-items:flex-start;}
-.brand{font-family:'Instrument Serif',serif;font-style:italic;font-size:18px;color:#0a0a0a;}
+.brand{font-size:18px;color:#0a0a0a;}
 .cover-tag{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#999;}
 .cover-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#999;display:block;margin-bottom:24px;}
 .cover-h1{font-size:clamp(40px,6vw,72px);font-weight:900;letter-spacing:-4px;line-height:0.9;color:#0a0a0a;margin-bottom:24px;}
@@ -21,9 +24,7 @@ body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font
 .cover-bottom-note{font-size:12px;color:#999;}
 
 .divider{width:100%;height:1.5px;background:#0a0a0a;margin:48px 0;}
-.divider-light{width:100%;height:1px;background:#e8e8e8;margin:32px 0;}
 .page-break{page-break-before:always;padding-top:60px;}
-
 .section{margin-bottom:56px;}
 .eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#999;display:block;margin-bottom:16px;}
 .section-title{font-size:clamp(28px,4vw,44px);font-weight:900;letter-spacing:-2px;line-height:0.95;color:#0a0a0a;margin-bottom:24px;}
@@ -33,17 +34,9 @@ body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font
 
 .highlight-block{background:#fddb4c;padding:24px 28px;margin:24px 0;}
 .highlight-block p{font-size:14px;color:#0a0a0a;line-height:1.8;font-weight:500;}
-
 .dark-block{background:#0a0a0a;padding:24px 28px;margin:24px 0;}
 .dark-block p{font-size:14px;color:#fff;line-height:1.8;}
 .dark-block strong{color:#fddb4c;}
-
-.deliverable-row{display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #e8e8e8;}
-.deliverable-row:first-child{border-top:1px solid #e8e8e8;}
-.deliverable-row:last-child{border-bottom:none;}
-.deliverable-num{font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;color:#ccc;flex-shrink:0;width:28px;}
-.deliverable-title{font-size:14px;font-weight:700;color:#0a0a0a;margin-bottom:4px;}
-.deliverable-desc{font-size:12px;color:#777;line-height:1.7;}
 
 .month-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin:24px 0;}
 .month-card{background:#f5f5f5;padding:20px;}
@@ -63,6 +56,11 @@ body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font
 .inclusion-title{font-size:13px;font-weight:700;color:#0a0a0a;margin-bottom:4px;}
 .inclusion-desc{font-size:11px;color:#777;line-height:1.6;}
 
+.not-list{list-style:none;margin:16px 0;}
+.not-list li{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#555;}
+.not-list li:last-child{border-bottom:none;}
+.check-mark{color:#27ae60;font-weight:700;flex-shrink:0;}
+
 .pricing-block{border:1.5px solid #0a0a0a;padding:40px;margin:24px 0;}
 .pricing-title{font-family:'Instrument Serif',serif;font-style:italic;font-size:24px;color:#0a0a0a;margin-bottom:8px;}
 .pricing-amount{font-size:56px;font-weight:900;letter-spacing:-3px;color:#0a0a0a;line-height:1;margin-bottom:4px;}
@@ -72,20 +70,94 @@ body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font
 .pricing-includes li:last-child{border-bottom:none;}
 .pricing-dash{font-family:'Instrument Serif',serif;font-style:italic;color:#999;}
 
-.not-list{list-style:none;margin:16px 0;}
-.not-list li{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#555;}
-.not-list li:last-child{border-bottom:none;}
-.check-mark{color:#27ae60;font-weight:700;flex-shrink:0;}
+.preview-btn{display:inline-block;background:#0a0a0a;color:#fddb4c;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:16px 32px;border:none;cursor:pointer;transition:background 0.2s;margin-top:8px;}
+.preview-btn:hover{background:#333;}
 
 .contact-section{border-top:1.5px solid #0a0a0a;padding-top:40px;margin-top:60px;display:flex;justify-content:space-between;align-items:flex-end;}
-.contact-brand{font-family:'Instrument Serif',serif;font-style:italic;font-size:24px;color:#0a0a0a;}
+.contact-brand{font-size:24px;color:#0a0a0a;}
 .contact-details{text-align:right;font-size:12px;color:#999;line-height:2;}
 
-@media print{
-  body{padding:40px;}
-  .cover{min-height:auto;padding-bottom:40px;}
-  .page-break{page-break-before:always;}
-}
+/* POPUP */
+.popup-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:200;display:none;align-items:flex-start;justify-content:center;padding:24px;overflow-y:auto;}
+.popup-overlay.open{display:flex;}
+.popup-window{background:#0a0a0a;width:100%;max-width:720px;margin:auto;position:relative;border:1.5px solid #1a1a1a;}
+
+.popup-close{position:absolute;top:16px;right:16px;background:none;border:1.5px solid #333;color:#fff;font-size:16px;cursor:pointer;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;z-index:10;}
+.popup-close:hover{background:#333;}
+
+/* POPUP TABS */
+.popup-tabs{display:flex;border-bottom:1.5px solid #1a1a1a;overflow-x:auto;}
+.popup-tab{padding:14px 20px;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#444;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all 0.2s;}
+.popup-tab:hover{color:#fff;}
+.popup-tab.active{color:#fddb4c;border-bottom:2px solid #fddb4c;}
+
+.popup-panel{display:none;padding:32px;}
+.popup-panel.active{display:block;}
+
+/* POPUP TYPOGRAPHY */
+.pp-eyebrow{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#444;display:block;margin-bottom:12px;}
+.pp-h1{font-size:clamp(20px,3vw,32px);font-weight:900;letter-spacing:-1.5px;color:#fff;margin-bottom:8px;line-height:1;}
+.pp-h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#fddb4c;}
+.pp-h2{font-size:16px;font-weight:700;color:#fddb4c;margin:24px 0 10px;letter-spacing:-0.5px;}
+.pp-body{font-size:13px;color:#888;line-height:1.8;margin-bottom:12px;}
+.pp-body strong{color:#fff;}
+.pp-bullet{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid #111;font-size:12px;color:#666;}
+.pp-bullet:last-child{border-bottom:none;}
+.pp-bullet-dot{color:#fddb4c;flex-shrink:0;font-weight:700;}
+.pp-highlight{background:#1a1a1a;border-left:3px solid #fddb4c;padding:14px 18px;margin:16px 0;}
+.pp-highlight p{font-size:13px;color:#fff;line-height:1.7;}
+
+/* CALENDAR TABLE */
+.cal-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:11px;}
+.cal-table th{background:#111;color:#fddb4c;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:10px 12px;text-align:left;border-bottom:1.5px solid #222;}
+.cal-table td{padding:10px 12px;border-bottom:1px solid #111;color:#888;vertical-align:top;}
+.cal-table tr:hover td{background:#111;}
+.cal-table td:first-child{color:#444;font-weight:700;}
+.cal-table .tag{display:inline-block;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:2px;}
+.tag-reel{background:rgba(253,219,76,0.15);color:#fddb4c;}
+.tag-reddit{background:rgba(255,100,50,0.15);color:#ff6432;}
+.tag-rest{background:rgba(255,255,255,0.05);color:#444;}
+.cal-table .week-row td{background:#0f0f0f;color:#333;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 12px;}
+
+/* SERIES CARDS */
+.series-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0;}
+.series-card{background:#111;padding:16px;border:1px solid #1a1a1a;}
+.series-name{font-size:11px;font-weight:700;color:#fddb4c;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;display:block;}
+.series-freq{font-size:10px;color:#444;margin-bottom:8px;}
+.series-desc{font-size:11px;color:#666;line-height:1.6;}
+
+/* INSTAGRAM MOCKUP */
+.ig-mockups{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0;}
+.ig-mock{background:#111;border:1px solid #1a1a1a;overflow:hidden;}
+.ig-mock-screen{aspect-ratio:9/16;background:#1a1a1a;display:flex;flex-direction:column;justify-content:space-between;padding:10px;position:relative;}
+.ig-mock-device{font-size:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#444;background:#0a0a0a;padding:4px 8px;align-self:flex-start;}
+.ig-mock-game{font-size:14px;font-weight:900;color:#fff;letter-spacing:-0.5px;line-height:1.1;}
+.ig-mock-hook{font-size:9px;color:#666;margin-top:4px;line-height:1.4;}
+.ig-mock-bar{height:3px;background:#fddb4c;position:absolute;bottom:0;left:0;right:0;}
+.ig-mock-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+.ig-mock-play-btn{width:32px;height:32px;border:2px solid rgba(255,255,255,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.ig-mock-play-btn::after{content:'▶';font-size:10px;color:rgba(255,255,255,0.5);margin-left:2px;}
+.ig-mock-footer{background:#0a0a0a;padding:8px 10px;display:flex;justify-content:space-between;align-items:center;}
+.ig-mock-price{font-size:9px;font-weight:700;color:#fddb4c;}
+.ig-mock-url{font-size:8px;color:#333;}
+
+/* HOOKS TABLE */
+.hooks-list{display:flex;flex-direction:column;gap:0;}
+.hook-item{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid #111;align-items:flex-start;}
+.hook-num{font-size:10px;font-weight:700;color:#444;flex-shrink:0;margin-top:2px;}
+.hook-text{font-size:12px;color:#888;line-height:1.6;}
+.hook-text em{color:#fddb4c;font-style:normal;}
+
+/* SECTION LIST */
+.section-list{display:flex;flex-direction:column;gap:0;}
+.section-item{display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #111;}
+.section-item:last-child{border-bottom:none;}
+.section-item-num{font-size:10px;font-weight:700;color:#fddb4c;flex-shrink:0;width:20px;}
+.section-item-title{font-size:12px;color:#888;}
+.section-item-title strong{color:#fff;}
+
+@media print{body{padding:40px;}.cover{min-height:auto;}.page-break{page-break-before:always;}}
+@media(max-width:680px){body{padding:32px 20px;}.month-grid{grid-template-columns:1fr;}.inclusion-grid{grid-template-columns:1fr;}.series-grid{grid-template-columns:1fr;}.ig-mockups{grid-template-columns:repeat(3,1fr);}}
 </style>
 </head>
 <body>
@@ -93,7 +165,7 @@ body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font
 <!-- COVER -->
 <div class="cover">
   <div class="cover-top">
-    <span class="brand">RareLabs</span>
+    <span class="brand"><span class="logo-rare">Rare</span><span class="logo-labs">Labs</span></span>
     <span class="cover-tag">Confidential — V1 Esports</span>
   </div>
   <div>
@@ -107,13 +179,12 @@ body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font
   </div>
 </div>
 
-<!-- THE PROBLEM -->
+<!-- THE OPPORTUNITY -->
 <div class="section">
   <span class="eyebrow">The opportunity</span>
   <h2 class="section-title">The customer exists.<br/><em>Nobody is speaking to them.</em></h2>
   <p class="body-text">90% of India's potential gamers do not own a gaming PC. They want to play CS:GO, Valorant, GTA. They own a MacBook, an iPad, a low-spec laptop. The hardware barrier has stopped them — not the desire.</p>
   <p class="body-text">No platform in India is talking to this person specifically. GeForce Now requires existing hardware. Xbox Cloud Gaming is not optimised for the Indian market. The frustrated potential gamer — 18 to 28, college-educated, device-owning but hardware-limited — is completely unaddressed.</p>
-  <p class="body-text">V1 Esports solves the exact problem this person has. The strategy is about making sure they know it.</p>
   <div class="highlight-block">
     <p>"Play any game. On any device. Without buying a gaming PC." — This is the one line that drives everything. It answers the customer's objection before they raise it.</p>
   </div>
@@ -121,13 +192,13 @@ body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font
 
 <div class="divider"></div>
 
-<!-- WHO THIS IS FOR -->
+<!-- TARGET CUSTOMER -->
 <div class="section">
   <span class="eyebrow">The target customer</span>
   <h2 class="section-title">Not the hardcore<br/><em>gamer.</em></h2>
   <p class="body-text">The hardcore gamer already owns a Rs.80,000 gaming PC. They are not your customer.</p>
   <p class="body-text">Your customer is the frustrated potential gamer. 18 to 28 years old. Owns a MacBook, iPad or low-spec Windows laptop. Has looked at gaming PCs and decided Rs.60,000 to Rs.1,20,000 is not worth it for a hobby. Has given up — not because they do not want to game, but because the hardware barrier felt insurmountable.</p>
-  <p class="body-text">This person exists in massive numbers across Mumbai, Pune and Bangalore. They are in colleges, co-working spaces, cafes. They will pay Rs.60 per hour to play the game they actually want — on the device they already own.</p>
+  <p class="body-text">This person exists in massive numbers across Mumbai, Pune and Bangalore. They will pay Rs.60 per hour to play the game they actually want — on the device they already own.</p>
 </div>
 
 <div class="divider"></div>
@@ -137,11 +208,10 @@ body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font
   <span class="eyebrow">The approach</span>
   <h2 class="section-title">Organic first.<br/><em>Always.</em></h2>
   <p class="body-text">No paid ads in Month 1. The message is not proven yet. Spending on ads before organic validates the creative is burning money to find out what does not work.</p>
-  <p class="body-text">The strategy is built around one insight — the product demonstration IS the content. Someone playing CS:GO on a MacBook Air is a scroll-stopping moment. No script needed. No production budget needed. The product sells itself if it works on camera.</p>
   <div class="dark-block">
     <p>The best performing content in this category will always be: <strong>device + game title + it actually works.</strong> Everything else supports this. Nothing replaces it.</p>
   </div>
-  <p class="body-text">Instagram Reels is the primary platform. YouTube Shorts is the distribution amplifier — every reel gets repurposed as a Short at zero extra effort. Reddit seeds the community in the right groups. WhatsApp retains and converts trial users to paying users.</p>
+  <p class="body-text">Instagram Reels is the primary platform. YouTube Shorts is the distribution amplifier — every reel gets repurposed as a Short at zero extra effort. Reddit seeds the community. WhatsApp retains and converts trial users to paying users.</p>
 </div>
 
 <div class="divider"></div>
@@ -189,77 +259,41 @@ body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font
 
 <div class="divider"></div>
 
-<!-- WHAT IS INCLUDED -->
-<div class="section page-break">
+<!-- INCLUSIONS -->
+<div class="section">
   <span class="eyebrow">What is included</span>
   <h2 class="section-title">Everything they need<br/><em>to execute.</em></h2>
-  <p class="body-text">The strategy document is written so that anyone on the V1 team can open it on Day 1 and know exactly what to do in the next hour, the next day, the next week. No ambiguity. No interpretation needed.</p>
-
+  <p class="body-text">The strategy document is written so that the content creator can open it on Day 1 and know exactly what to film, how to film it, when to post it and what hook to use. No ambiguity. No interpretation needed.</p>
   <div class="inclusion-grid">
-    <div class="inclusion">
-      <span class="inclusion-num">01</span>
-      <div class="inclusion-title">Market Reality & Positioning</div>
-      <div class="inclusion-desc">Who the real customer is, why existing players are not a threat, the one line that drives all communication.</div>
-    </div>
-    <div class="inclusion">
-      <span class="inclusion-num">02</span>
-      <div class="inclusion-title">Platform Strategy</div>
-      <div class="inclusion-desc">Instagram, YouTube Shorts, Reddit and WhatsApp — what each platform does, how to use them together.</div>
-    </div>
-    <div class="inclusion">
-      <span class="inclusion-num">03</span>
-      <div class="inclusion-title">Content Education</div>
-      <div class="inclusion-desc">What native content means, hook-retain-reward framework, hook structures that work, what kills engagement.</div>
-    </div>
-    <div class="inclusion">
-      <span class="inclusion-num">04</span>
-      <div class="inclusion-title">5 Content Series</div>
-      <div class="inclusion-desc">Named, formatted and ready to execute. Device Test, Comparison, Real People, POV, Community.</div>
-    </div>
-    <div class="inclusion">
-      <span class="inclusion-num">05</span>
-      <div class="inclusion-title">Day One Playbook</div>
-      <div class="inclusion-desc">Hour by hour, day by day instructions for the first week. Open it and execute without thinking.</div>
-    </div>
-    <div class="inclusion">
-      <span class="inclusion-num">06</span>
-      <div class="inclusion-title">30-Day Content Calendar</div>
-      <div class="inclusion-desc">Every day of Month 1 mapped. What to post, what format, what hook to use. No decisions needed.</div>
-    </div>
-    <div class="inclusion">
-      <span class="inclusion-num">07</span>
-      <div class="inclusion-title">What Not To Do</div>
-      <div class="inclusion-desc">The 10 mistakes that kill strategies like this before they start. Specific, non-obvious and critical.</div>
-    </div>
-    <div class="inclusion">
-      <span class="inclusion-num">08</span>
-      <div class="inclusion-title">Metrics That Matter</div>
-      <div class="inclusion-desc">What to track, what to ignore, how to know if it is working. The weekly review framework.</div>
-    </div>
-    <div class="inclusion">
-      <span class="inclusion-num">09</span>
-      <div class="inclusion-title">Onboarding Checklist</div>
-      <div class="inclusion-desc">Everything to set up before posting begins. Pre-flight checklist so nothing is missed on Day 1.</div>
-    </div>
-    <div class="inclusion">
-      <span class="inclusion-num">10</span>
-      <div class="inclusion-title">3 Months Monitoring + Weekly Calls</div>
-      <div class="inclusion-desc">Every Monday for 12 weeks. Review numbers, course correct, plan the next week together.</div>
-    </div>
+    <div class="inclusion"><span class="inclusion-num">01</span><div class="inclusion-title">Market Reality & Positioning</div><div class="inclusion-desc">Who the real customer is, why existing players are not a threat, the one line that drives all communication.</div></div>
+    <div class="inclusion"><span class="inclusion-num">02</span><div class="inclusion-title">Platform Strategy</div><div class="inclusion-desc">Instagram, YouTube Shorts, Reddit and WhatsApp — what each platform does, how to use them together.</div></div>
+    <div class="inclusion"><span class="inclusion-num">03</span><div class="inclusion-title">Content Education</div><div class="inclusion-desc">What native content means, hook-retain-reward framework, hook structures that work, what kills engagement.</div></div>
+    <div class="inclusion"><span class="inclusion-num">04</span><div class="inclusion-title">5 Content Series</div><div class="inclusion-desc">Named, formatted and ready to execute. Device Test, Comparison, Real People, POV, Community.</div></div>
+    <div class="inclusion"><span class="inclusion-num">05</span><div class="inclusion-title">Day One Playbook</div><div class="inclusion-desc">Hour by hour, day by day instructions for the first week. Open it and execute without thinking.</div></div>
+    <div class="inclusion"><span class="inclusion-num">06</span><div class="inclusion-title">30-Day Content Calendar</div><div class="inclusion-desc">Every day of Month 1 mapped. What to post, what format, what hook to use. No decisions needed.</div></div>
+    <div class="inclusion"><span class="inclusion-num">07</span><div class="inclusion-title">What Not To Do</div><div class="inclusion-desc">The 10 mistakes that kill strategies like this before they start. Specific, non-obvious and critical.</div></div>
+    <div class="inclusion"><span class="inclusion-num">08</span><div class="inclusion-title">Metrics That Matter</div><div class="inclusion-desc">What to track, what to ignore, how to know if it is working. The weekly review framework.</div></div>
+    <div class="inclusion"><span class="inclusion-num">09</span><div class="inclusion-title">Onboarding Checklist</div><div class="inclusion-desc">Everything to set up before posting begins. Pre-flight checklist so nothing is missed on Day 1.</div></div>
+    <div class="inclusion"><span class="inclusion-num">10</span><div class="inclusion-title">3 Months Monitoring + Weekly Calls</div><div class="inclusion-desc">Every Monday for 12 weeks. Review numbers, course correct, plan the next week together.</div></div>
+  </div>
+
+  <div style="margin-top:32px;">
+    <p class="body-text" style="margin-bottom:16px;">Want to see what the document actually looks like before deciding?</p>
+    <button class="preview-btn" onclick="document.getElementById('previewPopup').classList.add('open')">Preview the strategy document →</button>
   </div>
 </div>
 
 <div class="divider"></div>
 
-<!-- WHAT WE DO NOT DO -->
-<div class="section">
+<!-- SCOPE -->
+<div class="section page-break">
   <span class="eyebrow">Clarity on scope</span>
   <h2 class="section-title">What this is.<br/><em>What it is not.</em></h2>
   <div class="dark-block">
-    <p>This is a <strong>strategy and accountability engagement.</strong> We build the complete playbook and stay in the game for 3 months to make sure it is executed correctly. We do not shoot or edit the content. We do not manage the Instagram account. We do not run ads. Your content creator executes. We tell him exactly what to make, in what format, with what hook — so nothing is wasted.</p>
+    <p>This is a <strong>strategy and accountability engagement.</strong> We build the complete playbook and stay for 3 months to make sure it is executed correctly. Your content creator executes. We tell him exactly what to make, in what format, with what hook — so nothing is wasted.</p>
   </div>
   <ul class="not-list">
-    <li><span class="check-mark">✓</span>Complete 90-day strategy document — written to be executed without interpretation</li>
+    <li><span class="check-mark">✓</span>Complete 90-day strategy document written to be executed without interpretation</li>
     <li><span class="check-mark">✓</span>Content education — hook structures, native content principles, what works and what does not</li>
     <li><span class="check-mark">✓</span>30-day content calendar — every day mapped with specific formats and hooks</li>
     <li><span class="check-mark">✓</span>Weekly Monday calls for 12 weeks — review, course correct, plan ahead</li>
@@ -269,15 +303,14 @@ body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font
 
 <div class="divider"></div>
 
-<!-- THE ACCOUNTABILITY CLAUSE -->
-<div class="section page-break">
+<!-- ACCOUNTABILITY -->
+<div class="section">
   <span class="eyebrow">How this works</span>
   <h2 class="section-title">Follow it.<br/><em>We adjust together.</em></h2>
-  <p class="body-text">If the strategy is followed exactly — posting cadence maintained, content formats used, weekly calls attended — and results are not on track by the end of any month, we revisit and adjust together. The strategy is a living document.</p>
+  <p class="body-text">If the strategy is followed exactly and results are not on track by the end of any month, we revisit and adjust together on the weekly call.</p>
   <div class="highlight-block">
-    <p>If the strategy is not followed — posting missed, formats ignored, calls skipped — no adjustments are made. Results in that scenario are the result of execution failure, not strategy failure. The engagement continues as planned.</p>
+    <p>If the strategy is not followed — posting missed, formats ignored, calls skipped — no adjustments are made. Results in that scenario are the result of execution failure, not strategy failure.</p>
   </div>
-  <p class="body-text">This clause protects both parties. The strategy works when executed. It does not work when ignored.</p>
 </div>
 
 <div class="divider"></div>
@@ -288,7 +321,7 @@ body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font
   <h2 class="section-title">One engagement.<br/><em>One price.</em></h2>
   <div class="pricing-block">
     <div class="pricing-title">V1 Esports — 90-Day Growth Strategy</div>
-    <div class="pricing-amount">₹54,999</div>
+    <div class="pricing-amount">Rs.54,999</div>
     <span class="pricing-note">Fixed fee · One-time engagement</span>
     <ul class="pricing-includes">
       <li><span class="pricing-dash">—</span>Complete 90-day strategy document</li>
@@ -311,12 +344,232 @@ body{background:#fff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;font
 </div>
 
 <div class="contact-section">
-  <div class="contact-brand">RareLabs</div>
-  <div class="contact-details">
-    rarelabsbyjojo.com<br/>
-    @admasterjojo
+  <div class="contact-brand"><span class="logo-rare">Rare</span><span class="logo-labs">Labs</span></div>
+  <div class="contact-details">rarelabsbyjojo.com<br/>@admasterjojo</div>
+</div>
+
+<!-- PREVIEW POPUP -->
+<div class="popup-overlay" id="previewPopup">
+  <div class="popup-window">
+    <button class="popup-close" onclick="document.getElementById('previewPopup').classList.remove('open')">✕</button>
+
+    <div style="padding:28px 32px 0;">
+      <span style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#444;display:block;margin-bottom:8px;">Strategy Document Preview</span>
+      <div style="font-size:20px;font-weight:900;letter-spacing:-1px;color:#fff;margin-bottom:4px;">V1 Esports — 90-Day Growth Strategy</div>
+      <div style="font-size:12px;color:#444;margin-bottom:20px;">3 of 15 sections shown below. Full document delivered on engagement start.</div>
+    </div>
+
+    <div class="popup-tabs">
+      <div class="popup-tab active" onclick="switchTab(0,this)">Day One Playbook</div>
+      <div class="popup-tab" onclick="switchTab(1,this)">Content Series</div>
+      <div class="popup-tab" onclick="switchTab(2,this)">30-Day Calendar</div>
+      <div class="popup-tab" onclick="switchTab(3,this)">All 15 Sections</div>
+    </div>
+
+    <!-- TAB 1 — DAY ONE PLAYBOOK -->
+    <div class="popup-panel active" id="panel0">
+      <span class="pp-eyebrow">Section 07</span>
+      <h2 class="pp-h1">Day One <em>Playbook</em></h2>
+      <p class="pp-body">This section tells you exactly what to do in the first hour, the first day and the first week. No interpretation needed. Open it and execute.</p>
+
+      <div class="pp-h2">The first hour</div>
+      <div class="pp-bullet"><span class="pp-bullet-dot">—</span>Create the Instagram account — handle: @v1esports or @v1esportscloud</div>
+      <div class="pp-bullet"><span class="pp-bullet-dot">—</span>Write the bio — exactly this: "Play any game. On any device. Rs.60/hr | link in bio"</div>
+      <div class="pp-bullet"><span class="pp-bullet-dot">—</span>Set profile picture — logo, clean, readable at small size</div>
+      <div class="pp-bullet"><span class="pp-bullet-dot">—</span>Create 3 highlight categories: Proof, Pricing, Community</div>
+      <div class="pp-bullet"><span class="pp-bullet-dot">—</span>Do not post anything yet</div>
+
+      <div class="pp-h2">The first day</div>
+      <div class="pp-bullet"><span class="pp-bullet-dot">—</span>Film 3 Device Test videos — CS:GO on MacBook, GTA on iPad, Valorant on low spec laptop</div>
+      <div class="pp-bullet"><span class="pp-bullet-dot">—</span>Film in good natural light. Vertical format. Hook in first 2 seconds.</div>
+      <div class="pp-bullet"><span class="pp-bullet-dot">—</span>Edit each video to under 45 seconds. Game running by second 10. URL at the end.</div>
+      <div class="pp-bullet"><span class="pp-bullet-dot">—</span>Add trending audio from Instagram Reels audio library</div>
+      <div class="pp-bullet"><span class="pp-bullet-dot">—</span>Do NOT post all three today. Schedule across the first 3 days.</div>
+      <div class="pp-bullet"><span class="pp-bullet-dot">—</span>Post the first reel at 7pm</div>
+
+      <div class="pp-h2">The first week — day by day</div>
+      <table class="cal-table">
+        <thead><tr><th>Day</th><th>Action</th><th>Format</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Day 1</td><td>Post Device Test reel 1</td><td><span class="tag tag-reel">Reel</span></td><td>CS:GO on MacBook Air</td></tr>
+          <tr><td>Day 2</td><td>Post Device Test reel 2</td><td><span class="tag tag-reel">Reel</span></td><td>GTA V on iPad</td></tr>
+          <tr><td>Day 3</td><td>Engage with comments only</td><td><span class="tag tag-rest">—</span></td><td>Reply within 2 hours</td></tr>
+          <tr><td>Day 4</td><td>Post Device Test reel 3</td><td><span class="tag tag-reel">Reel</span></td><td>Valorant on low spec laptop</td></tr>
+          <tr><td>Day 5</td><td>Post Comparison reel</td><td><span class="tag tag-reel">Reel</span></td><td>Rs.60,000 PC vs Rs.60/hr</td></tr>
+          <tr><td>Day 6</td><td>Post Reddit thread</td><td><span class="tag tag-reddit">Reddit</span></td><td>r/IndiaGaming — founder sharing the product</td></tr>
+          <tr><td>Day 7</td><td>Review and film</td><td><span class="tag tag-rest">—</span></td><td>Best performer becomes next week focus</td></tr>
+        </tbody>
+      </table>
+
+      <div class="pp-highlight"><p>Every comment gets a reply within 2 hours for the first 30 days. Every single one. This is non-negotiable.</p></div>
+    </div>
+
+    <!-- TAB 2 — CONTENT SERIES -->
+    <div class="popup-panel" id="panel1">
+      <span class="pp-eyebrow">Section 06</span>
+      <h2 class="pp-h1">5 Content <em>Series</em></h2>
+      <p class="pp-body">Every piece of content belongs to one of these five series. This prevents content fatigue and builds recognition — viewers start to recognise the format and look forward to it.</p>
+
+      <div class="series-grid">
+        <div class="series-card">
+          <span class="series-name">The Device Test</span>
+          <div class="series-freq">2× per week · Month 1 primary</div>
+          <div class="series-desc">Device + game title + it works. The product is the content. No script needed.</div>
+        </div>
+        <div class="series-card">
+          <span class="series-name">The Comparison</span>
+          <div class="series-freq">1× per week</div>
+          <div class="series-desc">Rs.60,000 PC vs Rs.60/hr. Answer the price objection before they raise it.</div>
+        </div>
+        <div class="series-card">
+          <span class="series-name">Real People</span>
+          <div class="series-freq">1× per week · Start Month 2</div>
+          <div class="series-desc">Real users gaming on their own devices. Authentic reactions. No scripting.</div>
+        </div>
+        <div class="series-card">
+          <span class="series-name">POV</span>
+          <div class="series-freq">1× per week</div>
+          <div class="series-desc">Camera over shoulder. Game running. Viewer feels like they are the one playing.</div>
+        </div>
+      </div>
+
+      <div class="pp-h2">Hook structures that work</div>
+      <div class="hooks-list">
+        <div class="hook-item"><span class="hook-num">01</span><span class="hook-text"><em>"I played CS:GO on my MacBook Air."</em> — disbelief hook. MacBook and CS:GO do not belong in the same sentence.</span></div>
+        <div class="hook-item"><span class="hook-num">02</span><span class="hook-text"><em>"Rs.60,000 gaming PC vs Rs.60 per hour."</em> — price comparison. Immediately relevant to anyone who has looked at gaming PCs.</span></div>
+        <div class="hook-item"><span class="hook-num">03</span><span class="hook-text"><em>"My iPad just became a gaming PC."</em> — identity transformation. The iPad owner sees themselves immediately.</span></div>
+        <div class="hook-item"><span class="hook-num">04</span><span class="hook-text"><em>"I have been gaming for 3 hours on my office laptop. My boss has no idea."</em> — humour and relatability.</span></div>
+        <div class="hook-item"><span class="hook-num">05</span><span class="hook-text"><em>"Play GTA on your phone. Yes, actually."</em> — disbelief. GTA on a phone sounds impossible. That impossibility is the hook.</span></div>
+        <div class="hook-item"><span class="hook-num">06</span><span class="hook-text"><em>"The reason you are not gaming is not money. It is hardware."</em> — reframe. Repositions the barrier before offering the solution.</span></div>
+      </div>
+
+      <div class="pp-h2">What the content looks like</div>
+      <div class="ig-mockups">
+        <div class="ig-mock">
+          <div class="ig-mock-screen">
+            <div class="ig-mock-device">MacBook Air</div>
+            <div class="ig-mock-play"><div class="ig-mock-play-btn"></div></div>
+            <div>
+              <div class="ig-mock-game">CS:GO</div>
+              <div class="ig-mock-hook">"I played CS:GO on my MacBook Air. Here is what happened."</div>
+            </div>
+            <div class="ig-mock-bar"></div>
+          </div>
+          <div class="ig-mock-footer"><span class="ig-mock-price">Rs.60/hr</span><span class="ig-mock-url">v1esports.com</span></div>
+        </div>
+        <div class="ig-mock">
+          <div class="ig-mock-screen">
+            <div class="ig-mock-device">iPad</div>
+            <div class="ig-mock-play"><div class="ig-mock-play-btn"></div></div>
+            <div>
+              <div class="ig-mock-game">GTA V</div>
+              <div class="ig-mock-hook">"My iPad just became a gaming PC."</div>
+            </div>
+            <div class="ig-mock-bar"></div>
+          </div>
+          <div class="ig-mock-footer"><span class="ig-mock-price">Rs.60/hr</span><span class="ig-mock-url">v1esports.com</span></div>
+        </div>
+        <div class="ig-mock">
+          <div class="ig-mock-screen">
+            <div class="ig-mock-device">Office Laptop</div>
+            <div class="ig-mock-play"><div class="ig-mock-play-btn"></div></div>
+            <div>
+              <div class="ig-mock-game">Valorant</div>
+              <div class="ig-mock-hook">"Gaming at work. My boss has no idea."</div>
+            </div>
+            <div class="ig-mock-bar"></div>
+          </div>
+          <div class="ig-mock-footer"><span class="ig-mock-price">Rs.60/hr</span><span class="ig-mock-url">v1esports.com</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3 — CALENDAR -->
+    <div class="popup-panel" id="panel2">
+      <span class="pp-eyebrow">Section 13</span>
+      <h2 class="pp-h1">30-Day Content <em>Calendar</em></h2>
+      <p class="pp-body">Every day of Month 1 mapped. What to post, what format, what hook. No decisions needed during execution.</p>
+      <table class="cal-table">
+        <thead><tr><th>Day</th><th>Series</th><th>Format</th><th>Hook / Action</th><th>Platform</th></tr></thead>
+        <tbody>
+          <tr class="week-row"><td colspan="5">Week 1 — Launch</td></tr>
+          <tr><td>1</td><td>Device Test</td><td><span class="tag tag-reel">Reel</span></td><td>CS:GO on MacBook Air</td><td>IG + Shorts</td></tr>
+          <tr><td>2</td><td>Device Test</td><td><span class="tag tag-reel">Reel</span></td><td>GTA V on iPad</td><td>IG + Shorts</td></tr>
+          <tr><td>3</td><td>Engage only</td><td><span class="tag tag-rest">—</span></td><td>Reply to all comments</td><td>—</td></tr>
+          <tr><td>4</td><td>Device Test</td><td><span class="tag tag-reel">Reel</span></td><td>Valorant on low spec laptop</td><td>IG + Shorts</td></tr>
+          <tr><td>5</td><td>Comparison</td><td><span class="tag tag-reel">Reel</span></td><td>Rs.60,000 PC vs Rs.60/hr</td><td>IG + Shorts</td></tr>
+          <tr><td>6</td><td>Community</td><td><span class="tag tag-reddit">Reddit</span></td><td>Founder post in r/IndiaGaming</td><td>Reddit</td></tr>
+          <tr><td>7</td><td>Review + Film</td><td><span class="tag tag-rest">—</span></td><td>Film next week content</td><td>—</td></tr>
+          <tr class="week-row"><td colspan="5">Week 2 — Build</td></tr>
+          <tr><td>8</td><td>Device Test</td><td><span class="tag tag-reel">Reel</span></td><td>FIFA on office laptop</td><td>IG + Shorts</td></tr>
+          <tr><td>9</td><td>POV</td><td><span class="tag tag-reel">Reel</span></td><td>Gaming during lunch on office laptop</td><td>IG + Shorts</td></tr>
+          <tr><td>10</td><td>Engage only</td><td><span class="tag tag-rest">—</span></td><td>Reply to all comments</td><td>—</td></tr>
+          <tr><td>11</td><td>Device Test</td><td><span class="tag tag-reel">Reel</span></td><td>Call of Duty on MacBook Pro</td><td>IG + Shorts</td></tr>
+          <tr><td>12</td><td>Comparison</td><td><span class="tag tag-reel">Reel</span></td><td>What Rs.60 per hour actually buys you</td><td>IG + Shorts</td></tr>
+          <tr><td>13</td><td>Outreach</td><td><span class="tag tag-rest">DMs</span></td><td>20 college gaming groups — Mumbai</td><td>IG DMs</td></tr>
+          <tr><td>14</td><td>Review + Film</td><td><span class="tag tag-rest">—</span></td><td>Double down on best format</td><td>—</td></tr>
+          <tr class="week-row"><td colspan="5">Week 3 — Expand</td></tr>
+          <tr><td>15</td><td>Device Test</td><td><span class="tag tag-reel">Reel</span></td><td>New game based on Week 1-2 data</td><td>IG + Shorts</td></tr>
+          <tr><td>16</td><td>POV</td><td><span class="tag tag-reel">Reel</span></td><td>Gaming on the go — bus, cafe</td><td>IG + Shorts</td></tr>
+          <tr><td>17</td><td>Engage only</td><td><span class="tag tag-rest">—</span></td><td>Reply to all comments</td><td>—</td></tr>
+          <tr><td>18</td><td>Device Test</td><td><span class="tag tag-reel">Reel</span></td><td>Highest performing game from Week 1</td><td>IG + Shorts</td></tr>
+          <tr><td>19</td><td>Comparison</td><td><span class="tag tag-reel">Reel</span></td><td>Why I stopped looking for a gaming PC</td><td>IG + Shorts</td></tr>
+          <tr><td>20</td><td>Outreach</td><td><span class="tag tag-rest">DMs</span></td><td>20 college gaming groups — Pune</td><td>IG DMs</td></tr>
+          <tr><td>21</td><td>Review + Film</td><td><span class="tag tag-rest">—</span></td><td>Plan Month 2 content</td><td>—</td></tr>
+          <tr class="week-row"><td colspan="5">Week 4 — Close Month 1</td></tr>
+          <tr><td>22</td><td>Device Test</td><td><span class="tag tag-reel">Reel</span></td><td>Best format with new game title</td><td>IG + Shorts</td></tr>
+          <tr><td>23</td><td>POV</td><td><span class="tag tag-reel">Reel</span></td><td>Gaming at midnight on a MacBook</td><td>IG + Shorts</td></tr>
+          <tr><td>24</td><td>Engage only</td><td><span class="tag tag-rest">—</span></td><td>Reply to all comments</td><td>—</td></tr>
+          <tr><td>25</td><td>Device Test</td><td><span class="tag tag-reel">Reel</span></td><td>New game title</td><td>IG + Shorts</td></tr>
+          <tr><td>26</td><td>Comparison</td><td><span class="tag tag-reel">Reel</span></td><td>The math nobody talks about</td><td>IG + Shorts</td></tr>
+          <tr><td>27</td><td>Outreach</td><td><span class="tag tag-rest">DMs</span></td><td>20 college gaming groups — Bangalore</td><td>IG DMs</td></tr>
+          <tr><td>28</td><td>Review + Film</td><td><span class="tag tag-rest">—</span></td><td>Film Month 2 first week content</td><td>—</td></tr>
+          <tr><td>29</td><td>Device Test</td><td><span class="tag tag-reel">Reel</span></td><td>Best performing game title</td><td>IG + Shorts</td></tr>
+          <tr><td>30</td><td>Month 1 Recap</td><td><span class="tag tag-reel">Reel</span></td><td>30 days of gaming without a gaming PC</td><td>IG + Shorts</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TAB 4 — ALL SECTIONS -->
+    <div class="popup-panel" id="panel3">
+      <span class="pp-eyebrow">Full document</span>
+      <h2 class="pp-h1">All 15 <em>Sections</em></h2>
+      <p class="pp-body">The complete strategy document covers everything below. Delivered before execution begins.</p>
+      <div class="section-list">
+        <div class="section-item"><span class="section-item-num">01</span><span class="section-item-title"><strong>Executive Summary</strong> — How to use this document, the 3-month vision, what to expect</span></div>
+        <div class="section-item"><span class="section-item-num">02</span><span class="section-item-title"><strong>Market Reality</strong> — Who the real customer is, why competitors are not a threat yet, the gap V1 owns</span></div>
+        <div class="section-item"><span class="section-item-num">03</span><span class="section-item-title"><strong>Positioning & Brand Voice</strong> — The one line, what to say, what to never say</span></div>
+        <div class="section-item"><span class="section-item-num">04</span><span class="section-item-title"><strong>Platform Strategy</strong> — Instagram, YouTube Shorts, Reddit, WhatsApp — role of each platform</span></div>
+        <div class="section-item"><span class="section-item-num">05</span><span class="section-item-title"><strong>Content Education</strong> — Native content, hook-retain-reward, hook structures, what kills engagement</span></div>
+        <div class="section-item"><span class="section-item-num">06</span><span class="section-item-title"><strong>5 Content Series</strong> — Device Test, Comparison, Real People, POV, Community — fully detailed</span></div>
+        <div class="section-item"><span class="section-item-num">07</span><span class="section-item-title"><strong>Day One Playbook</strong> — Hour by hour, day by day, week by week instructions</span></div>
+        <div class="section-item"><span class="section-item-num">08</span><span class="section-item-title"><strong>Month by Month Plan</strong> — Month 1, 2 and 3 with weekly breakdowns and goals</span></div>
+        <div class="section-item"><span class="section-item-num">09</span><span class="section-item-title"><strong>What Not To Do</strong> — 10 specific mistakes that kill strategies like this before they start</span></div>
+        <div class="section-item"><span class="section-item-num">10</span><span class="section-item-title"><strong>Competitor Watching</strong> — What to watch, what to learn, what not to do with the information</span></div>
+        <div class="section-item"><span class="section-item-num">11</span><span class="section-item-title"><strong>Metrics That Matter</strong> — What to track, what to ignore, the weekly review framework</span></div>
+        <div class="section-item"><span class="section-item-num">12</span><span class="section-item-title"><strong>Monitoring Framework</strong> — What the 12 weekly calls cover, how to prepare</span></div>
+        <div class="section-item"><span class="section-item-num">13</span><span class="section-item-title"><strong>30-Day Content Calendar</strong> — Every day of Month 1 mapped with format, hook and platform</span></div>
+        <div class="section-item"><span class="section-item-num">14</span><span class="section-item-title"><strong>Onboarding Checklist</strong> — Everything to set up before posting begins</span></div>
+        <div class="section-item"><span class="section-item-num">15</span><span class="section-item-title"><strong>Goals, Flexibility & Accountability Clause</strong> — Projected milestones, what happens if results are off track</span></div>
+      </div>
+      <div class="pp-highlight" style="margin-top:24px;">
+        <p>This preview covers 3 of 15 sections. The full document is written so that the content creator can open it on Day 1 and know exactly what to film, how to film it, when to post it and what hook to use. Nothing is left to interpretation.</p>
+      </div>
+    </div>
+
   </div>
 </div>
 
+<script>
+function switchTab(index, el) {
+  document.querySelectorAll('.popup-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.popup-panel').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('panel' + index).classList.add('active');
+}
+document.getElementById('previewPopup').addEventListener('click', function(e) {
+  if(e.target === this) this.classList.remove('open');
+});
+</script>
 </body>
 </html>
